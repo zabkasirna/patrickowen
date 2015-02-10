@@ -63,7 +63,7 @@
         ┃   ┗━► Cart Panel
         ┣━► Campaign:
         ┃   ┗━► Article Grouping
-        ┣━► Detail Product:
-        ┃   ┗━► Image Map
+        ┣━► Scarve:
+        ┃   ┗━► Canvas ( Blowing Scarve )
         ┗━► Detail Product:
             ┗━► Image Map
