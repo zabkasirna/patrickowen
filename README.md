@@ -66,3 +66,11 @@
         │   └─□ Canvas ( Blowing Scarve )
         └─□ Detail Product:
             └─□ Image Map
+
+Plugin Candidate for Image Mapping:
+
+[Annotator Pro](http://codecanyon.net/item/annotator-pro-image-tooltips-zooming/9788132)
+[Visual Composer Add-on Image Hotspot with Tooltip](http://codecanyon.net/item/annotator-pro-image-tooltips-zooming/9788132)
+[HelloPins](http://codecanyon.net/item/hellopins/9563456)
+[Woo Product Viewer with Hotspot](http://codecanyon.net/item/woo-product-viewer-with-hotspot/8204639)
+[Lite Tooltip](http://codecanyon.net/item/lite-tooltip-responsive-wordpress-plugin/4165378)
