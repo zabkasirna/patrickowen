@@ -1,68 +1,68 @@
     Structure:
         ├─□ Ethos
         ├─□ Anthology
-        ┃   ├─□ Campaigns
-        ┃   ├─□ Lookbooks
-        ┃   ┗─□ Catwalks
+        │   ├─□ Campaigns
+        │   ├─□ Lookbooks
+        │   └─□ Catwalks
         ├─□ Heirloom
-        ┃   ┗─□ Shop per seasons
+        │   └─□ Shop per seasons
         ├─□ Scarves
         ├─□ Exposé
         ├─□ Inspiration
         ├─□ Contact
         ├─□ TOC
-        ┗─□ Newsletter
+        └─□ Newsletter
 
     Framework:
         ├─□ Wordpress
-        ┗─□ Slim
+        └─□ Slim
 
     Folder Structure:
-        ┗─□ /patrickowen
+        └─□ /patrickowen
             ├─□ contents
-            ┃   ├─□ /themes
-            ┃   ├─□ /plugin 
-            ┃   ├─□ /uploads 
-            ┃   ┗─□ index.php
-            ┗─□ /wp
-                ┗─□ $ git submodule github.com/wordpress/wordpress
-                ┗─□ $ composer install worpress
+            │   ├─□ /themes
+            │   ├─□ /plugin 
+            │   ├─□ /uploads 
+            │   └─□ index.php
+            └─□ /wp
+                └─□ $ git submodule github.com/wordpress/wordpress
+                └─□ $ composer install worpress
 
     Deployment:
         ├─□ deploy.io
-        ┗─□ duplicator
+        └─□ duplicator
 
      Environment:
         ├─□ localhost: localhost:1337
         ├─□ staging: dev.patrickowen.net ( cpanel / .htaccess )
-        ┗─□ production: patrickowen.net
+        └─□ production: patrickowen.net
 
     Dev Stack:
-        ┗─□ Backend:
-            ┗─□ PHP
+        └─□ Backend:
+            └─□ PHP
                 ├─□ Dependency Manager: composer
-                ┗─□ Routing: SLim Framework
-        ┗─□ Frontend:
-            ┗─□ Build System: Gulp
+                └─□ Routing: SLim Framework
+        └─□ Frontend:
+            └─□ Build System: Gulp
                 ├─□ Styling:
-                ┃   ├─□ SASS ⟶ CSS
-                ┃   ┗─□ prefixer
+                │   ├─□ SASS ⟶ CSS
+                │   └─□ prefixer
                 ├─□ JS
-                ┃   ├─□ core.js + vendors.js + plugins.js -> main.js
-                ┃   ┗─□ linting
+                │   ├─□ core.js + vendors.js + plugins.js -> main.js
+                │   └─□ linting
                 ├─□ HTML
-                ┃   ┗─□ template engine: twig
+                │   └─□ template engine: twig
                 ├─□ live reloading
-                ┗─□ Image Optimizer
+                └─□ Image Optimizer
 
     Special Requirement:
         ├─□ Home:
-        ┃   ├─□ Contact Us Interaction
-        ┃   ├─□ Headline Interaction
-        ┃   ┗─□ Cart Panel
+        │   ├─□ Contact Us Interaction
+        │   ├─□ Headline Interaction
+        │   └─□ Cart Panel
         ├─□ Campaign:
-        ┃   ┗─□ Article Grouping
+        │   └─□ Article Grouping
         ├─□ Scarve:
-        ┃   ┗─□ Canvas ( Blowing Scarve )
-        ┗─□ Detail Product:
-            ┗─□ Image Map
+        │   └─□ Canvas ( Blowing Scarve )
+        └─□ Detail Product:
+            └─□ Image Map
