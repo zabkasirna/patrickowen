@@ -18,8 +18,7 @@
         ┗━► Slim
 
     Folder Structure:
-        ┗━► /Projek_PO
-            ┣━► wp-config.php
+        ┗━► /patrickowen
             ┣━► contents
             ┃   ┣━► /themes
             ┃   ┣━► /plugin 
