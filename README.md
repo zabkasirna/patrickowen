@@ -78,3 +78,6 @@ Plugin Candidate for Image Mapping:
 [Woo Product Viewer with Hotspot](http://codecanyon.net/item/woo-product-viewer-with-hotspot/8204639)
 
 [Lite Tooltip](http://codecanyon.net/item/lite-tooltip-responsive-wordpress-plugin/4165378)
+
+
+test perubahan
