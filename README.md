@@ -81,3 +81,4 @@ Plugin Candidate for Image Mapping:
 
 
 test perubahan
+halo bang tile
