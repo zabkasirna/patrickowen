@@ -3,8 +3,8 @@
 define('WP_HOME', 'http://dev.patrickowen.net');
 define('WP_SITEURL', WP_HOME . '/site/');
 
-define('WP_CONTENT_DIR', APP_ROOT . 'wp-content');
-define('WP_CONTENT_URL', APP_ROOT . 'wp-content');
+define('WP_CONTENT_DIR', APP_ROOT . '/wp-content');
+define('WP_CONTENT_URL', WP_HOME . '/wp-content');
 
 //define('ABSPATH', APP_ROOT . '/site/');
 
