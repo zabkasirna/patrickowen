@@ -76,3 +76,7 @@ wp-content/wp-cache-config.php
 
 # sftp configuration file
 sftp-config.json
+
+
+# Notes and others scraps
+notes/*
