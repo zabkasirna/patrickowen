@@ -25,7 +25,7 @@
         "process-timeout": 1000
     },
     "extra": {
-        "webroot-dir": "wp",
+        "webroot-dir": "site",
         "webroot-package": "wordpress"
     }
 }

@@ -47,8 +47,19 @@ $RECYCLE.BIN/
 
 ### WordPress ###
 *.log
-wp/*
+bin/*
+site/*
 vendor/*
+
+config/env/local.php
+config/env/*local.php
+
+wp-content/backup/*
+wp-content/cache/*
+wp-content/plugins/*
+wp-content/upgrade/*
+wp-content/uploads/*
+
 .htaccess
 sitemap.xml
 sitemap.xml.gz
@@ -70,6 +81,8 @@ sitemap.xml.gz
 # sftp configuration file
 sftp-config.json
 
-
 # Notes and others scraps
 notes/*
+
+# You got the idea
+secrets/*
