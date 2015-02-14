@@ -1,5 +1,8 @@
     Structure:
         ├─□ Ethos
+        │   ├─□ The Brand
+        │   └─□ The Designer
+        │   └─□ Stockists
         ├─□ Anthology
         │   ├─□ Campaigns
         │   ├─□ Lookbooks
@@ -19,22 +22,21 @@
 
     Folder Structure:
         └─□ /patrickowen
-            ├─□ contents
+            ├─□ /wp-contents
             │   ├─□ /themes
             │   ├─□ /plugin 
             │   ├─□ /uploads 
             │   └─□ index.php
-            └─□ /wp
-                └─□ $ git submodule github.com/wordpress/wordpress
-                └─□ $ composer install worpress
+            └─□ /site
+                └─□ wp source installed through composer
 
     Deployment:
         ├─□ deploy.io
         └─□ duplicator
 
      Environment:
-        ├─□ localhost: localhost:1337
-        ├─□ staging: dev.patrickowen.net ( cpanel / .htaccess )
+        ├─□ localhost: dev.patrickowen.net
+        ├─□ staging: staging.patrickowen.net
         └─□ production: patrickowen.net
 
     Dev Stack:
@@ -48,7 +50,7 @@
                 │   ├─□ SASS ⟶ CSS
                 │   └─□ prefixer
                 ├─□ JS
-                │   ├─□ core.js + vendors.js + plugins.js -> main.js
+                │   ├─□ core.js + vendors.js + plugins.js ⟶ main.js
                 │   └─□ linting
                 ├─□ HTML
                 │   └─□ template engine: twig
@@ -67,14 +69,15 @@
         └─□ Detail Product:
             └─□ Image Map
 
-Plugin Candidate for Image Mapping:
+__Plugin Candidates:__
 
-[Annotator Pro](http://codecanyon.net/item/annotator-pro-image-tooltips-zooming/9788132)
+*   __Image Mapping:__
+    *   [Annotator Pro](http://codecanyon.net/item/annotator-pro-image-tooltips-zooming/9788132)
+    *   [Visual Composer Add-on Image Hotspot with Tooltip](http://codecanyon.net/item/annotator-pro-image-tooltips-zooming/9788132)
+    *   [HelloPins](http://codecanyon.net/item/hellopins/9563456)
+    *   [Woo Product Viewer with Hotspot](http://codecanyon.net/item/woo-product-viewer-with-hotspot/8204639)
+    *   [Lite Tooltip](http://codecanyon.net/item/lite-tooltip-responsive-wordpress-plugin/4165378)
 
-[Visual Composer Add-on Image Hotspot with Tooltip](http://codecanyon.net/item/annotator-pro-image-tooltips-zooming/9788132)
-
-[HelloPins](http://codecanyon.net/item/hellopins/9563456)
-
-[Woo Product Viewer with Hotspot](http://codecanyon.net/item/woo-product-viewer-with-hotspot/8204639)
-
-[Lite Tooltip](http://codecanyon.net/item/lite-tooltip-responsive-wordpress-plugin/4165378)
+*   __Ajax Stuff:__
+    *   [Ajaxinate](https://github.com/synapticism/ajaxinate)
+    *   [WP AJAX Page Loader](https://github.com/synapticism/wp-ajax-page-loader)
