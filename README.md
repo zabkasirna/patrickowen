@@ -22,7 +22,7 @@
 
     Folder Structure:
         └─□ /patrickowen
-            ├─□ /wp-contents
+            ├─□ /content
             │   ├─□ /themes
             │   ├─□ /plugin 
             │   ├─□ /uploads 
@@ -35,7 +35,7 @@
         └─□ duplicator
 
      Environment:
-        ├─□ localhost: dev.patrickowen.net
+        ├─□ localhost: patrickowen.dev
         ├─□ staging: staging.patrickowen.net
         └─□ production: patrickowen.net
 
@@ -43,7 +43,7 @@
         └─□ Backend:
             └─□ PHP
                 ├─□ Dependency Manager: composer
-                └─□ Routing: SLim Framework
+                └─□ Routing: slim
         └─□ Frontend:
             └─□ Build System: Gulp
                 ├─□ Styling:
