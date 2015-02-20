@@ -1,10 +1,10 @@
 <?php
 
-define('WP_HOME', 'http://dev.patrickowen.net');
+define('WP_HOME', 'http://patrickowen.dev');
 define('WP_SITEURL', WP_HOME . '/site/');
 
-define('WP_CONTENT_DIR', APP_ROOT . '/wp-content');
-define('WP_CONTENT_URL', WP_HOME . '/wp-content');
+define('WP_CONTENT_DIR', APP_ROOT . '/content');
+define('WP_CONTENT_URL', WP_HOME . '/content');
 
 //define('ABSPATH', APP_ROOT . '/site/');
 
@@ -12,7 +12,7 @@ define('WP_DEBUG', true);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'po_db');
+define('DB_NAME', 'po');
 
 /** MySQL database username */
 define('DB_USER', 'po_adm');

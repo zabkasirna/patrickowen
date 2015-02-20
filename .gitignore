@@ -51,14 +51,21 @@ bin/*
 site/*
 vendor/*
 
-config/env/local.php
-config/env/*local.php
+config/env/*
 
 wp-content/backup/*
 wp-content/cache/*
 wp-content/plugins/*
 wp-content/upgrade/*
 wp-content/uploads/*
+wp-content/themes/*
+
+content/backup/*
+content/cache/*
+content/plugins/*
+content/upgrade/*
+content/uploads/*
+content/themes/*
 
 .htaccess
 sitemap.xml
@@ -82,7 +89,7 @@ sitemap.xml.gz
 sftp-config.json
 
 # Notes and others scraps
-notes/*
+note/*
 
 # You got the idea
-secrets/*
+secret/*
