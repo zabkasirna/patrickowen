@@ -51,21 +51,17 @@ bin/*
 site/*
 vendor/*
 
+## Change below according your project environment ##
 config/env/*
-
-wp-content/backup/*
-wp-content/cache/*
-wp-content/plugins/*
-wp-content/upgrade/*
-wp-content/uploads/*
-wp-content/themes/*
-
 content/backup/*
 content/cache/*
 content/plugins/*
 content/upgrade/*
 content/uploads/*
 content/themes/*
+
+# Re-include project theme #
+!content/themes/sirna-po15
 
 .htaccess
 sitemap.xml
