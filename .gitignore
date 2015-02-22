@@ -68,6 +68,10 @@ sitemap.xml
 sitemap.xml.gz
 
 
+### Frontend ###
+node_modules/*
+
+
 ### SublimeText ###
 # cache files for sublime text
 *.tmlanguage.cache
