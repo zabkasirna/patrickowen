@@ -1,0 +1,18 @@
+{
+  "name": "sirna-po15-wp-theme",
+  "version": "0.0.0",
+  "description": "Wordpress theme for patrickowen website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zabkasirna/patrickowen.git"
+  },
+  "keywords": [
+    "patrickowen"
+  ],
+  "author": "Sirna",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zabkasirna/patrickowen/issues"
+  },
+  "homepage": "https://github.com/zabkasirna/patrickowen"
+}
