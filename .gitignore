@@ -73,6 +73,7 @@ sitemap.xml.gz
 
 ### Frontend ###
 node_modules/*
+bower_components/*
 
 
 ### SublimeText ###
