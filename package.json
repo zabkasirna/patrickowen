@@ -1,5 +1,5 @@
 {
-  "name": "sirna-po15-wp-theme",
+  "name": "sirna-po15",
   "version": "0.0.0",
   "description": "Wordpress theme for patrickowen website",
   "repository": {
@@ -10,15 +10,17 @@
     "patrickowen"
   ],
   "author": "Sirna",
-  "license": "MIT",
+  "license": "proprietary",
   "bugs": {
     "url": "https://github.com/zabkasirna/patrickowen/issues"
   },
   "homepage": "https://github.com/zabkasirna/patrickowen",
   "devDependencies": {
     "bower": "^1.3.12",
+    "browser-sync": "^2.2.1",
     "browserify": "^9.0.3",
     "event-stream": "^3.2.2",
+    "glob-stream": "^4.0.1",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-cached": "^1.0.2",
@@ -37,6 +39,7 @@
     "gulp-size": "^1.2.0",
     "gulp-sourcemaps": "^1.3.0",
     "gulp-streamify": "0.0.5",
+    "gulp-substituter": "^0.3.0",
     "gulp-uglify": "^1.1.0",
     "gulp-usemin": "^0.3.11",
     "gulp-util": "^3.0.3",
@@ -46,6 +49,7 @@
     "run-sequence": "^1.0.2",
     "stringify": "^3.1.0",
     "vinyl-source-stream": "^1.0.0",
-    "watchify": "^2.4.0"
+    "watchify": "^2.4.0",
+    "yargs": "^3.2.1"
   }
 }
