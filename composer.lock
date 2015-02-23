@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ec71db31aae2130bb148c0424dda6875",
+    "hash": "843e45dd86666fba1dbb1daf3b948c65",
     "packages": [
         {
             "name": "fancyguy/webroot-installer",
@@ -160,6 +160,26 @@
             "time": "2015-02-18 17:17:01"
         },
         {
+            "name": "wpackagist-plugin/debug-bar",
+            "version": "0.8.2",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/debug-bar/",
+                "reference": "tags/0.8.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/debug-bar.0.8.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/debug-bar/"
+        },
+        {
             "name": "wpackagist-plugin/developer",
             "version": "1.2.5",
             "source": {
@@ -178,6 +198,46 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/developer/"
+        },
+        {
+            "name": "wpackagist-plugin/query-monitor",
+            "version": "2.6.10",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/query-monitor/",
+                "reference": "tags/2.6.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/query-monitor.2.6.10.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/query-monitor/"
+        },
+        {
+            "name": "wpackagist-plugin/theme-check",
+            "version": "20141222.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/theme-check/",
+                "reference": "tags/20141222.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/theme-check.20141222.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/theme-check/"
         }
     ],
     "aliases": [],

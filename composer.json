@@ -48,6 +48,9 @@
         }
     },
     "require-dev": {
-        "wpackagist-plugin/developer": "1.2.5"
+        "wpackagist-plugin/developer": "1.2.5",
+        "wpackagist-plugin/debug-bar": "0.8.2",
+        "wpackagist-plugin/query-monitor": "2.6.10",
+        "wpackagist-plugin/theme-check": "20141222.1"
     }
 }
