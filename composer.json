@@ -1,4 +1,16 @@
 {
+    "name": "sirna/patrickowen",
+    "description": "project package for patrickowen site",
+    "license": "proprietary",
+    "homepage": "http://patrickowen.dev",
+    "authors": [
+        {
+            "name": "Sirna",
+            "email": "f@kema.il",
+            "homepage": "http://sirna.id",
+            "role": "Developer"
+        }
+    ],
     "repositories": [
         {
             "type": "package",
@@ -14,6 +26,10 @@
                     "fancyguy/webroot-installer": "1.1.0"
                 }
             }
+        },
+        {
+            "type": "composer",
+            "url": "http://wpackagist.org"
         }
     ],
     "require": {
@@ -26,6 +42,9 @@
     },
     "extra": {
         "webroot-dir": "site",
-        "webroot-package": "wordpress"
+        "webroot-package": "wordpress",
+        "installer-paths": {
+            "content/plugins/{$name}/": ["type:wordpress-plugin"]
+        }
     }
 }
