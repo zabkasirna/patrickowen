@@ -60,6 +60,9 @@ content/upgrade/*
 content/uploads/*
 content/themes/*
 
+# Re-include env config example #
+!config/env/development-example.php
+
 # Re-include project theme #
 !content/themes/sirna-po15
 
