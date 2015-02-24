@@ -64,7 +64,7 @@ content/themes/*
 !config/env/development-example.php
 
 # Re-include project theme #
-!content/themes/sirna-po15
+# !content/themes/sirna-po15
 
 .htaccess
 sitemap.xml
