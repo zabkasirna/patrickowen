@@ -4,19 +4,18 @@
 
 
 var gulp         = require('gulp')
-,   c            = require('../configs')
-,   errors       = require('../util/error-handler')
+,   c            = require('../configs/config')
+,   errors       = require('../utils/error-handler')
 ,   sass         = require('gulp-sass')
 ,   autoprefixer = require('gulp-autoprefixer')
 ,   size         = require('gulp-size')
 ,   gulpif       = require('gulp-if')
-,   livereload   = require('gulp-livereload')
 ,   sourcemaps   = require('gulp-sourcemaps')
 ;
 
 gulp.task('styles', function() {
 
-    var main = 'pefa';
+    var main = 'po';
 
     return gulp.src(c.indir + c.styledir + main + '.scss')
         .pipe(sourcemaps.init())

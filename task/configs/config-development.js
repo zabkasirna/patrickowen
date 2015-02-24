@@ -22,7 +22,7 @@ module.exports = {
     },
 
     images: {
-        src: src + "/resources/images/**",
+        src: src + "/images/**",
         dest: dest + "/uploads/images"
     },
 
@@ -34,7 +34,7 @@ module.exports = {
     },
 
     markup: {
-        src: src + '/templates/**/*.php',
+        src: src + '/template/**/*.php',
         dest: dest
     },
 
@@ -56,9 +56,9 @@ module.exports = {
         // A separate bundle will be generated for each
         // bundle config in the list below
         bundleConfigs: [{
-            entries: src + '/resources/scipts/index.js',
+            entries: src + '/scipts/index.js',
             dest: dest,
             outputName: 'app.js'
-        ]}
+        }]
     }
 };
