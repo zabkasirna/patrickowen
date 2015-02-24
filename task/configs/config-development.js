@@ -46,6 +46,11 @@ module.exports = {
         }
     },
 
+    bower: {
+        src: root + '/bower_components',
+        dest: dest + '/script/vendor'
+    },
+
     browserify: {
         // Enable source maps
         debug: true,
