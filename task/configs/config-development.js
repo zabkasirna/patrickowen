@@ -65,5 +65,10 @@ module.exports = {
             dest: dest,
             outputName: 'app.js'
         }]
+    },
+
+    style: {
+        src: src + '/style/',
+        dest: dest + '/'
     }
 };
