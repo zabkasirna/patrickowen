@@ -48,7 +48,6 @@ function po_gallery_style($css) {
  * SCRIPTS & ENQUEUEING
  */
 
-// loading modernizr and jquery, and reply script
 function po_scripts_and_styles() {
 
     global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
@@ -82,6 +81,60 @@ function po_scripts_and_styles() {
         // wp_enqueue_script( 'po-js' );
 
     }
+}
+
+/**
+ * THEME SUPPORT
+ */
+
+function po_theme_support() {
+
+    // wp thumbnails (sizes handled in functions.php)
+    // add_theme_support( 'post-thumbnails' );
+
+    // default thumb size
+    // set_post_thumbnail_size(125, 125, true);
+
+    // rss thingy
+    // add_theme_support('automatic-feed-links');
+
+    // to add header image support go here: http://themble.com/support/adding-header-background-image-support/
+
+    // adding post format support
+    // add_theme_support( 'post-formats',
+    //     array(
+    //         'aside',             // title less blurb
+    //         'gallery',           // gallery of images
+    //         'link',              // quick link to other site
+    //         'image',             // an image
+    //         'quote',             // a quick quote
+    //         'status',            // a Facebook like status update
+    //         'video',             // video
+    //         'audio',             // audio
+    //         'chat'               // chat transcript
+    //     )
+    // );
+
+    // wp menus
+    add_theme_support( 'menus' );
+
+    // registering wp3+ menus
+    register_nav_menus(
+        array(
+            'main-nav' => __( 'The Main Menu', 'sirna-po15' ),   // main nav in header
+            'footer-links' => __( 'Footer Links', 'sirna-po15' ) // secondary nav in footer
+        )
+    );
+} /* end po theme support */
+
+/**
+ * OTHER CLEANUPS
+ */
+
+// remove the p from around imgs
+// (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
+function po_filter_ptags_on_images($content){
+    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 
 ?>
