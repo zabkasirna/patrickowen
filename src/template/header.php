@@ -1,44 +1,38 @@
 <?php
 /**
- * @package WordPress
- * @subpackage sirna-po15
+ * @package sirna-po15
+ * @subpackage header
  * @since 0.0.0
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta name="viewport" content="width=device-width">
-    <link rel="profile" href="http://gmpg.org/xfn/11">
+
+    <?php // force Internet Explorer to use the latest rendering engine available ?>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title><?php wp_title(''); ?></title>
+
+    <?php // mobile meta (hooray!) ?>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <?php // @todo Add all icons & favicons here ?>
+
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <script>(function(){document.documentElement.className='js'})();</script>
+
+    <?php // wordpress head functions ?>
     <?php wp_head(); ?>
+    <?php // end of wordpress head ?>
+
+    <?php // drop Google Analytics Here ?>
+    <?php // end analytics ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-    <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyfifteen' ); ?></a>
-
-    <div id="sidebar" class="sidebar">
-        <header id="masthead" class="site-header" role="banner">
-            <div class="site-branding">
-                <?php
-                    if ( is_front_page() && is_home() ) : ?>
-                        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                    <?php else : ?>
-                        <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-                    <?php endif;
-
-                    $description = get_bloginfo( 'description', 'display' );
-                    if ( $description || is_customize_preview() ) : ?>
-                        <p class="site-description"><?php echo $description; ?></p>
-                    <?php endif;
-                ?>
-                <button class="secondary-toggle"><?php _e( 'Menu and widgets', 'twentyfifteen' ); ?></button>
-            </div><!-- .site-branding -->
-        </header><!-- .site-header -->
-
-        <?php get_sidebar(); ?>
-    </div><!-- .sidebar -->
+    <p>on head</p>
 
     <div id="content" class="site-content">

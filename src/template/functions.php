@@ -17,7 +17,7 @@ function po_conf() {
     add_filter( 'the_generator', 'po_rss_version' );
 
     // Enqueue scripts & styles
-    add_action( 'wp_enqueue_script', 'po_scripts_and_styles', 999 );
+    add_action( 'wp_enqueue_scripts', 'po_scripts_and_styles', 999 );
 
     // theme support after theme setup
     po_theme_support();

@@ -11,6 +11,7 @@
  */
 
 function po_head_cleanup() {
+
     // EditURI link
     remove_action( 'wp_head', 'rsd_link' );
     // windows live writer
@@ -55,13 +56,13 @@ function po_scripts_and_styles() {
     if (!is_admin()) {
 
         // jquery
-        wp_register_script( 'po-jquery', get_stylesheet_directory_uri() . '/script/vendor/jquery/dist/jquery.js', array(), '', true );
+        wp_register_script( 'po-jquery', get_template_directory_uri() . '/script/vendor/jquery/dist/jquery.js', array(), '', true );
 
         // modernizr
-        wp_register_script( 'po-modernizr', get_stylesheet_directory_uri() . '/script/vendor/modernizr.js', array(), '', false );
+        wp_register_script( 'po-modernizr', get_template_directory_uri() . '/script/vendor/modernizr/modernizr.js', array(), '', false );
 
         // main stylesheet
-        // wp_register_style( 'po-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+        wp_register_style( 'po-stylesheet', get_stylesheet_directory_uri() . '/style.css', array(), '', 'all' );
 
         // ie-only stylesheet
         // @todo: Develop ie-only stylesheet
@@ -72,7 +73,7 @@ function po_scripts_and_styles() {
 
         // enqueue styles and scripts
         wp_enqueue_script( 'po-modernizr' );
-        // wp_enqueue_style( 'po-stylesheet' );
+        wp_enqueue_style( 'po-stylesheet' );
         // wp_enqueue_style( 'po-ie-only' );
 
         // $wp_styles->add_data( 'po-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
@@ -88,6 +89,7 @@ function po_scripts_and_styles() {
  */
 
 function po_theme_support() {
+
 
     // wp thumbnails (sizes handled in functions.php)
     // add_theme_support( 'post-thumbnails' );

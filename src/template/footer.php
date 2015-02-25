@@ -1,10 +1,12 @@
 <?php
 /**
- * @package WordPress
- * @subpackage sirna-po15
+ * @package sirna-po15
+ * @subpackage footer
  * @since 0.0.0
  */
 ?>
+
+    <p>on foot</p>
 
     </div><!-- .site-content -->
 
