@@ -4,7 +4,7 @@
 
 
 var gulp         = require('gulp')
-,   c            = require('../configs/config')
+,   config       = require('../configs/config')
 ,   errors       = require('../utils/error-handler')
 ,   sass         = require('gulp-sass')
 ,   autoprefixer = require('gulp-autoprefixer')
@@ -13,17 +13,19 @@ var gulp         = require('gulp')
 ,   sourcemaps   = require('gulp-sourcemaps')
 ;
 
-gulp.task('styles', function() {
+gulp.task('style', function() {
 
-    var main = 'po';
+    var file = 'style';
 
-    return gulp.src(c.indir + c.styledir + main + '.scss')
+    return gulp.src( config.style.src + file + '.scss' )
         .pipe(sourcemaps.init())
-        .pipe(sass())
+        .pipe(autoprefixer({
+            browsers: 'last 2 versions',
+        }))
+        .pipe( sass() )
         .pipe(sourcemaps.write('./maps'))
-        .on('error', errors)
-        // .pipe(autoprefixer("last 2 versions", "> 1%", "ie 8"))
-        .pipe(gulp.dest(c.outdir + c.styledir))
-        .pipe(size({ title: c.outdir + c.styledir + main + '.css' }))
+        .on( 'error', errors )
+        .pipe(gulp.dest( config.style.dest ))
+        .pipe( size( { title: config.style.dest + file + '.css' } ) )
     ;
 });
