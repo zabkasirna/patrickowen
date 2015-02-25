@@ -60,8 +60,11 @@ content/upgrade/*
 content/uploads/*
 content/themes/*
 
+# Re-include env config example #
+!config/env/development-example.php
+
 # Re-include project theme #
-!content/themes/sirna-po15
+# !content/themes/sirna-po15
 
 .htaccess
 sitemap.xml
@@ -70,6 +73,7 @@ sitemap.xml.gz
 
 ### Frontend ###
 node_modules/*
+bower_components/*
 
 
 ### SublimeText ###

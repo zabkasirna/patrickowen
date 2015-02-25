@@ -20,30 +20,52 @@
         ├─□ Wordpress
         └─□ Slim
 
-    Folder Structure:
+    Directory Structure:
         └─□ /patrickowen
+            ├─□ /config
+            │   ├─□ /env
+            │   │   └─□ your setup goes here
+            │   └─□ wordpress.php
             ├─□ /content
             │   ├─□ /themes
             │   ├─□ /plugin 
             │   ├─□ /uploads 
             │   └─□ index.php
-            └─□ /site
-                └─□ wp source installed through composer
+            ├─□ /node_modules
+            ├─□ /site
+            │   └─□ wp source managed via composer
+            ├─□ /src
+            │   ├─□ /script
+            │   ├─□ /style
+            │   │   └─□ /font
+            │   └─□ /template
+            ├─□ /task
+            │   ├─□ /configs
+            │   ├─□ /utils
+            │   ├─□ /tasks
+            │   └─□ index.js
+            ├─□ /vendor
+            ├─□ composer.json
+            ├─□ composer.lock
+            ├─□ gulpfile.js
+            ├─□ index.php
+            ├─□ package.json
+            └─□ wp-config.php
 
     Deployment:
-        ├─□ deploy.io
+        ├─□ dploy.io
         └─□ duplicator
 
-     Environment:
+     Env Addresses:
         ├─□ localhost: patrickowen.dev
         ├─□ staging: staging.patrickowen.net
         └─□ production: patrickowen.net
 
     Dev Stack:
         └─□ Backend:
-            └─□ PHP
-                ├─□ Dependency Manager: composer
-                └─□ Routing: slim
+        │   └─□ PHP
+        │       ├─□ Dependency Manager: composer
+        │       └─□ Routing: slim
         └─□ Frontend:
             └─□ Build System: Gulp
                 ├─□ Styling:
