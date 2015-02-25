@@ -2,8 +2,9 @@
 /**
  * Core Sirna-PO15 file
  * Patterns and Functions taken from:
- * Bones - WP Starter Theme, by Eddie Machado
- * URL: http://themble.com/bones
+ * Bones - WP Starter Theme, by Eddie Machado [http://themble.com/bones]
+ * @author Sirna <https://github.com/zabkasirna>
+ * @since 0.0.0
  */
 
 /**

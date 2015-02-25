@@ -1,7 +1,7 @@
 <?php
 /**
- * @package WordPress
- * @subpackage sirna-po15
+ * @package sirna-po15
+ * @subpackage index
  * @since 0.0.0
  */
 

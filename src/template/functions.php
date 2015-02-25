@@ -1,8 +1,8 @@
 <?php
-/*
-Author: Sirna
-URL: https://github.com/zabkasirna
-*/
+/**
+ * @author Sirna <https://github.com/zabkasirna>
+ * @since 0.0.0
+ */
 
 // Load theme's core
 require_once( 'sirna-po15.php' );
