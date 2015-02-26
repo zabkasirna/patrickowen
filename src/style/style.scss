@@ -1,15 +1,24 @@
 @import "base/doc";
 
-/* ------ {{ Start of _normalize }} ------ */
+/* ------ {{ ie-toggle }} ------ */
+$old: false;
+
+/* ------ {{ normalize }} ------ */
 @import "vendor/normalize/normalize";
 
-/* ------ {{ Start of _compass }} ------ */
-/* --------- {{ Compass mixins goes here }} --------- */
+/* ------ {{ compass-mixins }} ------ */
 @import "vendor/compass-mixins/compass";
 @import "vendor/compass-mixins/compass/layout";
 @import "vendor/compass-mixins/compass/support";
-/* ------ {{ End of _compass }} ------ */
+
+/* ------ {{ sirna-functions }} ------ */
+@import "function/sirna-parse-int";
+@import "function/sirna-rem-px";
+@import "function/sirna-unit-scale";
 
 .test {
     display: flex;
+    line-height: r(1);
+    abc: r(1rem);
+    def: x(1);
 }
