@@ -25,6 +25,11 @@
     "modernizr": "~2.8.3"
   },
   "overrides": {
-      "modernizr": { "main": "modernizr.js" }
+    "modernizr": {
+      "main": "modernizr.js"
+    }
+  },
+  "devDependencies": {
+    "compass-mixins": "~1.0.2"
   }
 }

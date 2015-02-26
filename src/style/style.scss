@@ -1,6 +1,14 @@
 @import "base/doc";
 
+/* ------ {{ Start of _normalize }} ------ */
 @import "vendor/normalize/normalize";
+
+/* ------ {{ Start of _compass }} ------ */
+/* --------- {{ Compass mixins goes here }} --------- */
+@import "vendor/compass-mixins/compass";
+@import "vendor/compass-mixins/compass/layout";
+@import "vendor/compass-mixins/compass/support";
+/* ------ {{ End of _compass }} ------ */
 
 .test {
     display: flex;
