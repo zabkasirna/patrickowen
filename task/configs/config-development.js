@@ -69,6 +69,12 @@ module.exports = {
 
     style: {
         src: src + '/style/',
-        dest: dest + '/'
+        dest: dest + '/',
+        font: 'fonts/**/*.{ttf,woff,eot,svg}'
+    },
+
+    font: {
+        src: src + '/style/font/**/*.{ttf,woff,eot,svg}',
+        dest: dest + '/font'
     }
 };

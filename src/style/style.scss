@@ -16,9 +16,24 @@ $old: false;
 @import "function/sirna-rem-px";
 @import "function/sirna-unit-scale";
 
-.test {
+/* ------ {{ sirna-mixins }} ------ */
+@import "mixin/sirna-clearfix";
+@import "mixin/sirna-font-face";
+@import "mixin/sirna-font-icon";
+@import "mixin/sirna-media-query";
+@import "mixin/sirna-transition";
+
+/* ------ {{ base }} ------ */
+@import "base/font";
+
+.zzz {
     display: flex;
-    line-height: r(1);
-    abc: r(1rem);
-    def: x(1);
+    abc: r(1);
+    def: r(1rem);
+    ghi: x(1);
+    font-family: $ff-sans-regular;
+}
+
+p.test {
+    font-family: $ff-sans-test;
 }
