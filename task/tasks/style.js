@@ -50,7 +50,7 @@ gulp.task('style:old', function() {
         .on( 'error', errors )
         .pipe( rename( file + ".ie.css") )
         .pipe( gulp.dest( config.style.dest ) )
-        .pipe( size( { title: config.style.dest + file + '.css' } ) )
+        .pipe( size( { title: config.style.dest + file + '.ie.css' } ) )
     ;
 });
 
