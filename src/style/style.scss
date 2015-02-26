@@ -25,6 +25,9 @@ $old: false;
 
 /* ------ {{ base }} ------ */
 @import "base/font";
+@import "base/color";
+@import "base/setting";
 
 /* ------ {{ object }} ------ */
 @import "object/global/element";
+@import "object/global/text";
