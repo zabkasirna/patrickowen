@@ -6,7 +6,8 @@ var fs   = require('fs')
 
 var root = '.'
 ,   src = root + '/src'
-,   dest = root + '/content/themes/' + packageConfig.name;
+,   dest = root + '/content/themes/' + packageConfig.name
+,   dest_plugin = root + '/content/plugins';
 
 module.exports = {
     browserSync: {
@@ -34,8 +35,14 @@ module.exports = {
     },
 
     markup: {
-        src: src + '/template/**/*.php',
-        dest: dest
+        template: {
+            src: src + '/template/**/*.php',
+            dest: dest
+        },
+        plugin: {
+            src: src + '/plugin/**/*.php',
+            dest: dest_plugin            
+        }
     },
 
     copy: {
