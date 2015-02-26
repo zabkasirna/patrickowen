@@ -10,6 +10,7 @@ var gulp     = require('gulp')
 
 gulp.task('default', function(done) {
     sequence(
+        ['markup'],
         ['styles'],
         ['watch'],
         done
