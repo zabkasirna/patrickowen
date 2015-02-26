@@ -1,4 +1,4 @@
-@mixin registration-icon($content) {
+@mixin s-registration-icon($content) {
     &:before {
         content: "#{$content}";
         font-family: 'FontAwesome';

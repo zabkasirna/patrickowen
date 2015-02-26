@@ -1,4 +1,4 @@
-@mixin rb-font-face($font-family, $font-filename, $font-url:'', $font-weight : inherit, $font-style :inherit) {
+@mixin s-font-face($font-family, $font-filename, $font-url:'', $font-weight : inherit, $font-style :inherit) {
     @font-face {
         font-family: '#{$font-family}';
         src:    url('#{$font-url}' + '#{$font-filename}.eot'); /* IE9 Compat Modes */

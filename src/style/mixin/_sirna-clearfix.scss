@@ -1,6 +1,6 @@
 // Source: http://nicolasgallagher.com/micro-clearfix-hack/
 
-@mixin clearfix() {
+@mixin s-clearfix() {
   &:before,
   &:after {
     content: " ";
@@ -11,7 +11,7 @@
   }
 }
 
-@mixin pie-clearfix() {
+@mixin s-pie-clearfix() {
   &:before,
   &:after {
     content: " ";
