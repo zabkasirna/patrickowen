@@ -26,14 +26,5 @@ $old: false;
 /* ------ {{ base }} ------ */
 @import "base/font";
 
-.zzz {
-    display: flex;
-    abc: r(1);
-    def: r(1rem);
-    ghi: x(1);
-    font-family: $ff-sans-regular;
-}
-
-p.test {
-    font-family: $ff-sans-test;
-}
+/* ------ {{ object }} ------ */
+@import "object/global/element";
