@@ -54,9 +54,12 @@ define('WPLANG', '');
 if ( !defined('ABSPATH') )
     define('ABSPATH', dirname(dirname(__FILE__)) . '/site/');
 
-/** Sets up WordPress vars and included files. */
-
-// var_dump(ABSPATH); die();
+/**
+ * Disable Post Revisions
+ * [ http://www.wpbeginner.com/wp-tutorials/how-to-disable-post-revisions-in-wordpress-and-reduce-database-size/ ]
+ */
+define('AUTOSAVE_INTERVAL', 600 );
+define('WP_POST_REVISIONS', false );
 
 // weird hack because otherwise wp-cli won't load when this wp-settings.php file is loaded
 if (!empty($_SERVER['HTTP_HOST']))
