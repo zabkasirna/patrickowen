@@ -7,5 +7,6 @@ var gulp = require('gulp')
 
 
 gulp.task( 'watch', function() {
-    gulp.watch(config.markup.src, ['markup']);
+    gulp.watch(config.markup.template.src, ['markups']);
+    gulp.watch(config.markup.plugin.src, ['markups']);
 });
