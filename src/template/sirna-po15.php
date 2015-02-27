@@ -93,7 +93,7 @@ function po_theme_support() {
 
 
     // wp thumbnails (sizes handled in functions.php)
-    // add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'post-thumbnails' );
 
     // default thumb size
     // set_post_thumbnail_size(125, 125, true);
@@ -135,9 +135,21 @@ function po_theme_support() {
  */
 
 // remove the p from around imgs
-// (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
+// [ http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/ ]
 function po_filter_ptags_on_images($content){
     return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+
+/**
+ * PO Campaign Plugin
+ * [ http://justintadlock.com/archives/2010/02/02/showing-custom-post-types-on-your-home-blog-page ]
+ */
+function get_campaign_for_home( $query ) {
+
+    if ( is_home() && $query->is_main_query() )
+        $query->set( 'post_type', array( 'campaign' ) );
+
+    return $query;
 }
 
 ?>

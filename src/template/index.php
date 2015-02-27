@@ -10,7 +10,20 @@ get_header(); ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
-            <p>Test</p>
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+            <p><?php the_title(); ?></p>
+            <section>
+                <?php the_post_thumbnail(); ?>
+            </section>
+
+            <?php endwhile; ?>
+
+        <?php else : ?>
+
+            <p>no post</p>
+
+        <?php endif; ?>
 
         </main><!-- .site-main -->
     </div><!-- .content-area -->
