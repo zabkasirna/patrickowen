@@ -5,9 +5,6 @@
  * @since 0.0.0
  */
 ?>
-
-    <p>on foot</p>
-
     </div><!-- .site-content -->
 
 </div><!-- .site -->

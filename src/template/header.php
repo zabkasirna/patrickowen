@@ -33,6 +33,4 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-    <p>on head</p>
-
     <div id="content" class="site-content">

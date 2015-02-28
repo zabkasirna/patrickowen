@@ -14,7 +14,7 @@ get_header(); ?>
 
             <p><?php the_title(); ?></p>
             <section>
-                <?php the_post_thumbnail(); ?>
+                <?php the_content(); ?>
             </section>
 
             <?php endwhile; ?>
