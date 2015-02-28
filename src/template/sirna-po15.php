@@ -67,7 +67,7 @@ function po_scripts_and_styles() {
 
         // ie-only stylesheet
         // @todo: Develop ie-only stylesheet
-        // wp_register_style( 'po-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
+        wp_register_style( 'po-stylesheet', get_stylesheet_directory_uri() . '/style.ie.css', array(), '' );
 
         // adding scripts file in the footer
         // wp_register_script( 'po-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
@@ -75,9 +75,9 @@ function po_scripts_and_styles() {
         // enqueue styles and scripts
         wp_enqueue_script( 'po-modernizr' );
         wp_enqueue_style( 'po-stylesheet' );
-        // wp_enqueue_style( 'po-ie-only' );
+        wp_enqueue_style( 'po-ie-only' );
 
-        // $wp_styles->add_data( 'po-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+        $wp_styles->add_data( 'po-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
         wp_enqueue_script( 'po-jquery' );
         // wp_enqueue_script( 'po-js' );
@@ -119,15 +119,15 @@ function po_theme_support() {
     // );
 
     // wp menus
-    add_theme_support( 'menus' );
+    // add_theme_support( 'menus' );
 
     // registering wp3+ menus
-    register_nav_menus(
-        array(
-            'main-nav' => __( 'The Main Menu', 'sirna-po15' ),   // main nav in header
-            'footer-links' => __( 'Footer Links', 'sirna-po15' ) // secondary nav in footer
-        )
-    );
+    // register_nav_menus(
+    //     array(
+    //         'main-nav' => __( 'The Main Menu', 'sirna-po15' ),   // main nav in header
+    //         'footer-links' => __( 'Footer Links', 'sirna-po15' ) // secondary nav in footer
+    //     )
+    // );
 } /* end po theme support */
 
 /**
