@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fc28850a1cb358ddd31e0776c769e8f6",
+    "hash": "66e212640f7bc4e33bc28ca5cf9011e9",
     "packages": [
         {
             "name": "fancyguy/webroot-installer",
@@ -158,6 +158,26 @@
                 "zikula"
             ],
             "time": "2015-02-18 17:17:01"
+        },
+        {
+            "name": "wpackagist-plugin/admin-toolbar-menus",
+            "version": "1.0.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/admin-toolbar-menus/",
+                "reference": "tags/1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/admin-toolbar-menus.1.0.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/admin-toolbar-menus/"
         },
         {
             "name": "wpackagist-plugin/debug-bar",
