@@ -1,0 +1,33 @@
+<?php
+/**
+ * @package sirna-po15
+ * @subpackage single-campaign
+ * @since 0.0.0
+ */
+
+get_header(); ?>
+
+    <div id="content">
+        <div id="inner-content">
+            <main id="main" role="main">
+        
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+                <p><?php the_title(); ?></p>
+                <section>
+                    <?php the_content(); ?>
+                </section>
+        
+                <?php endwhile; ?>
+        
+            <?php else : ?>
+        
+                <p>no single campaign</p>
+        
+            <?php endif; ?>
+        
+            </main><!-- #main -->
+        </div><!-- #inner-content -->
+    </div>
+
+<?php get_footer(); ?>
