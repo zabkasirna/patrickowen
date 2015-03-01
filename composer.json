@@ -56,6 +56,7 @@
         "wpackagist-plugin/unyson": "2.1.25",
         "wpackagist-plugin/wordpress-database-reset": "2.3.1",
         "wpackagist-plugin/reveal-template": "3.1",
-        "wpackagist-plugin/woocommerce": "2.3.5"
+        "wpackagist-plugin/woocommerce": "2.3.5",
+        "wpackagist-plugin/woocommerce-cart-tab": "0.3.1"
     }
 }

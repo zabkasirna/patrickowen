@@ -37,7 +37,7 @@
         <div class="header-inner">
             
             <div class="header-brand">
-                <h1><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
+                <a href="<?php echo home_url(); ?>" rel="nofollow"><?php echo get_template_directory_uri(); ?></a>
             </div>
 
         </div><!-- .header-inner -->
