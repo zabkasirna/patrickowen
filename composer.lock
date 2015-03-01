@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0fa8dff9a3df44e3723f63f400b59e67",
+    "hash": "a40749f645ddbe7f3558d35ead4599c0",
     "packages": [
         {
             "name": "fancyguy/webroot-installer",
@@ -278,6 +278,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/unyson/"
+        },
+        {
+            "name": "wpackagist-plugin/woocommerce",
+            "version": "2.3.5",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/woocommerce/",
+                "reference": "tags/2.3.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/woocommerce.2.3.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woocommerce/"
         },
         {
             "name": "wpackagist-plugin/wordpress-database-reset",
