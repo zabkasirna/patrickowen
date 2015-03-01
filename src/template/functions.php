@@ -13,6 +13,9 @@ function po_conf() {
     // Head cleanup
     add_action( 'init', 'po_head_cleanup' );
 
+    // Menu
+    add_action( 'init', 'register_po_nav_menus' );
+
     // Remove wp version from rss
     add_filter( 'the_generator', 'po_rss_version' );
 
