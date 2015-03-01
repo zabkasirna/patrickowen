@@ -97,37 +97,25 @@ function po_theme_support() {
     // default thumb size
     // set_post_thumbnail_size(125, 125, true);
 
-    // rss thingy
+    // wp rss
     // add_theme_support('automatic-feed-links');
 
-    // to add header image support go here: http://themble.com/support/adding-header-background-image-support/
-
-    // adding post format support
-    // add_theme_support( 'post-formats',
-    //     array(
-    //         'aside',             // title less blurb
-    //         'gallery',           // gallery of images
-    //         'link',              // quick link to other site
-    //         'image',             // an image
-    //         'quote',             // a quick quote
-    //         'status',            // a Facebook like status update
-    //         'video',             // video
-    //         'audio',             // audio
-    //         'chat'               // chat transcript
-    //     )
-    // );
-
-    // wp menus
-    // add_theme_support( 'menus' );
-
-    // registering wp3+ menus
-    // register_nav_menus(
-    //     array(
-    //         'main-nav' => __( 'The Main Menu', 'sirna-po15' ),   // main nav in header
-    //         'footer-links' => __( 'Footer Links', 'sirna-po15' ) // secondary nav in footer
-    //     )
-    // );
 } /* end po theme support */
+
+/**
+ * MENUS
+ */
+
+// Register Navigation Menus
+function register_po_nav_menus() {
+
+    $locations = array(
+        'main-navi' => __( 'Site main navigations', 'text_domain' ),
+        'footer-link' => __( 'Site secondary links', 'text_domain' ),
+    );
+    register_nav_menus( $locations );
+}
+
 
 /**
  * OTHER CLEANUPS
