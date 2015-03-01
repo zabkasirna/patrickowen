@@ -23,8 +23,8 @@ module.exports = {
     },
 
     images: {
-        src: src + "/images/**",
-        dest: dest + "/uploads/images"
+        src: src + '/image/**/*.{png,jpg,svg}',
+        dest: dest + '/uploads/images'
     },
 
     substituter: {
