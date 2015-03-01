@@ -7,6 +7,6 @@
 
 get_header(); ?>
 
-<p>FUCK</p>
+<?php wp_nav_menu (array('theme_location' => 'main-navi','menu_class' => 'nav'));?>
 
 <?php get_footer(); ?>
