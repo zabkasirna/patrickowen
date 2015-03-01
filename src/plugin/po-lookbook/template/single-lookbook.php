@@ -1,7 +1,7 @@
 <?php
 /**
  * @package sirna-po15
- * @subpackage single-campaign
+ * @subpackage single-lookbook
  * @since 0.0.0
  */
 
@@ -22,7 +22,7 @@ get_header(); ?>
         
             <?php else : ?>
         
-                <p>no single campaign</p>
+                <p>no single lookbook</p>
         
             <?php endif; ?>
         

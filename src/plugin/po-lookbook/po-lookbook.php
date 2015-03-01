@@ -99,7 +99,7 @@ function include_lookbook_template( $template_path ) {
             }
         }
     }
-
+    
     return $template_path;
 }
 

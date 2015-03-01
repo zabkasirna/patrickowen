@@ -37,7 +37,7 @@
         <div class="header-inner">
             
             <div class="header-brand">
-                <a href="<?php echo home_url(); ?>" rel="nofollow"><?php echo get_template_directory_uri(); ?></a>
+                <a href='index.php' rel=“nofollow”><img src='<?php echo get_template_directory_uri() . '/uploads/images/logo/logo.png' ?>'></a>
             </div>
 
         </div><!-- .header-inner -->
