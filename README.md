@@ -115,3 +115,4 @@ __Plugin Candidates:__
     *   [WooCommerce Admin Bar Addition](https://wordpress.org/plugins/woocommerce-admin-bar-addition)
     *   [WooCommerce Accepted Payment Methods](https://wordpress.org/plugins/woocommerce-accepted-payment-methods)
     *   [WooCommerce Add Form To Product](https://wordpress.org/support/view/plugin-reviews/woocommerce-add-form-to-product)
+    *   [WooCommerce Products Image Swapper](http://codecanyon.net/item/woocommerce-products-image-swapper/6500661)
