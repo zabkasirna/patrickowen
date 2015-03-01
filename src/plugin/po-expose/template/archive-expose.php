@@ -1,7 +1,7 @@
 <?php
 /**
  * @package sirna-po15
- * @subpackage archive-lookbook
+ * @subpackage archive-expose
  * @since 0.0.0
  */
 
@@ -22,7 +22,7 @@ get_header(); ?>
         
             <?php else : ?>
         
-                <p>no lookbook</p>
+                <p>no expose</p>
         
             <?php endif; ?>
         

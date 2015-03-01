@@ -1,7 +1,7 @@
 <?php
 /**
  * @package sirna-po15
- * @subpackage archive-lookbook
+ * @subpackage single-expose
  * @since 0.0.0
  */
 
@@ -12,7 +12,7 @@ get_header(); ?>
             <main id="main" role="main">
         
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        
+
                 <p><?php the_title(); ?></p>
                 <section>
                     <?php the_content(); ?>
@@ -22,7 +22,7 @@ get_header(); ?>
         
             <?php else : ?>
         
-                <p>no lookbook</p>
+                <p>no single expose</p>
         
             <?php endif; ?>
         
