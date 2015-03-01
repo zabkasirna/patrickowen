@@ -99,6 +99,7 @@ __Plugin Candidates:__
     *   [Visual Composer Add-on Image Hotspot with Tooltip](http://codecanyon.net/item/annotator-pro-image-tooltips-zooming/9788132)
     *   [HelloPins](http://codecanyon.net/item/hellopins/9563456)
     *   [Woo Product Viewer with Hotspot](http://codecanyon.net/item/woo-product-viewer-with-hotspot/8204639)
+    *   [Image - Hotspots](http://tekanewascripts.info/composer/image-hotspots/)
     *   [Lite Tooltip](http://codecanyon.net/item/lite-tooltip-responsive-wordpress-plugin/4165378)
 
 *   __Ajax Stuff:__
