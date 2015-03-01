@@ -80,8 +80,9 @@ a {
     @include link-colors($black, $red, $black, $black, $black);
     @include reset-box-model;
 
-    font-size: $p-font-size;
-    line-height: $p-line-height;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
 
     text-decoration: none;
 
