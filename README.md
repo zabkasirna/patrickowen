@@ -103,3 +103,13 @@ __Plugin Candidates:__
 *   __Ajax Stuff:__
     *   [Ajaxinate](https://github.com/synapticism/ajaxinate)
     *   [WP AJAX Page Loader](https://github.com/synapticism/wp-ajax-page-loader)
+
+*   __Woocommerce Addons__
+    *   [WooCommerce Cart Tab](https://wordpress.org/plugins/woocommerce-all-currencies)
+    *   [WooCommerce Customizer](https://wordpress.org/plugins/woocommerce-customizer/)
+    *   [WooCommerce Product Image Zoom - Zwoom](https://wordpress.org/plugins/zwoom-woocommerce-product-image-zoom-extension-by-wisdmlabs)
+    *   [WooCommerce All Currencies](https://wordpress.org/plugins/woocommerce-cart-tab)
+    *   [WooCommerce Add Form To Product](https://wordpress.org/support/view/plugin-reviews/woocommerce-add-form-to-product)
+    *   [WooCommerce Accepted Payment Methods](https://wordpress.org/plugins/woocommerce-accepted-payment-methods)
+    *   [WooCommerce Attributes Menu Manager](https://wordpress.org/plugins/woocommerce-attributes-menu-manager)
+    *   [WooCommerce Admin Bar Addition](https://wordpress.org/plugins/woocommerce-admin-bar-addition)
