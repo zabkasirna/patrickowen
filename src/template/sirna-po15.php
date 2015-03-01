@@ -2,8 +2,9 @@
 /**
  * Core Sirna-PO15 file
  * Patterns and Functions taken from:
- * Bones - WP Starter Theme, by Eddie Machado
- * URL: http://themble.com/bones
+ * Bones - WP Starter Theme, by Eddie Machado [http://themble.com/bones]
+ * @author Sirna <https://github.com/zabkasirna>
+ * @since 0.0.0
  */
 
 /**
@@ -11,6 +12,7 @@
  */
 
 function po_head_cleanup() {
+
     // EditURI link
     remove_action( 'wp_head', 'rsd_link' );
     // windows live writer
@@ -24,9 +26,9 @@ function po_head_cleanup() {
     // WP version
     remove_action( 'wp_head', 'wp_generator' );
     // remove WP version from css
-    add_filter( 'style_loader_src', 'bones_remove_wp_ver_css_js', 9999 );
+    add_filter( 'style_loader_src', 'po_remove_wp_ver_css_js', 9999 );
     // remove Wp version from scripts
-    add_filter( 'script_loader_src', 'bones_remove_wp_ver_css_js', 9999 );
+    add_filter( 'script_loader_src', 'po_remove_wp_ver_css_js', 9999 );
 
 } /* end po15 head cleanup */
 
@@ -55,27 +57,27 @@ function po_scripts_and_styles() {
     if (!is_admin()) {
 
         // jquery
-        wp_register_script( 'po-jquery', get_stylesheet_directory_uri() . '/script/vendor/jquery/dist/jquery.js', array(), '', true );
+        wp_register_script( 'po-jquery', get_template_directory_uri() . '/script/vendor/jquery/dist/jquery.js', array(), '', true );
 
         // modernizr
-        wp_register_script( 'po-modernizr', get_stylesheet_directory_uri() . '/script/vendor/modernizr.js', array(), '', false );
+        wp_register_script( 'po-modernizr', get_template_directory_uri() . '/script/vendor/modernizr/modernizr.js', array(), '', false );
 
         // main stylesheet
-        // wp_register_style( 'po-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+        wp_register_style( 'po-stylesheet', get_stylesheet_directory_uri() . '/style.css', array(), '', 'all' );
 
         // ie-only stylesheet
         // @todo: Develop ie-only stylesheet
-        // wp_register_style( 'po-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
+        wp_register_style( 'po-stylesheet', get_stylesheet_directory_uri() . '/style.ie.css', array(), '' );
 
         // adding scripts file in the footer
         // wp_register_script( 'po-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
         // enqueue styles and scripts
         wp_enqueue_script( 'po-modernizr' );
-        // wp_enqueue_style( 'po-stylesheet' );
-        // wp_enqueue_style( 'po-ie-only' );
+        wp_enqueue_style( 'po-stylesheet' );
+        wp_enqueue_style( 'po-ie-only' );
 
-        // $wp_styles->add_data( 'po-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+        $wp_styles->add_data( 'po-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
         wp_enqueue_script( 'po-jquery' );
         // wp_enqueue_script( 'po-js' );
@@ -89,8 +91,9 @@ function po_scripts_and_styles() {
 
 function po_theme_support() {
 
+
     // wp thumbnails (sizes handled in functions.php)
-    // add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'post-thumbnails' );
 
     // default thumb size
     // set_post_thumbnail_size(125, 125, true);
@@ -116,15 +119,15 @@ function po_theme_support() {
     // );
 
     // wp menus
-    add_theme_support( 'menus' );
+    // add_theme_support( 'menus' );
 
     // registering wp3+ menus
-    register_nav_menus(
-        array(
-            'main-nav' => __( 'The Main Menu', 'sirna-po15' ),   // main nav in header
-            'footer-links' => __( 'Footer Links', 'sirna-po15' ) // secondary nav in footer
-        )
-    );
+    // register_nav_menus(
+    //     array(
+    //         'main-nav' => __( 'The Main Menu', 'sirna-po15' ),   // main nav in header
+    //         'footer-links' => __( 'Footer Links', 'sirna-po15' ) // secondary nav in footer
+    //     )
+    // );
 } /* end po theme support */
 
 /**
@@ -132,9 +135,21 @@ function po_theme_support() {
  */
 
 // remove the p from around imgs
-// (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
+// [ http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/ ]
 function po_filter_ptags_on_images($content){
     return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+
+/**
+ * PO Campaign Plugin
+ * [ http://justintadlock.com/archives/2010/02/02/showing-custom-post-types-on-your-home-blog-page ]
+ */
+function get_campaign_for_home( $query ) {
+
+    if ( is_home() && $query->is_main_query() )
+        $query->set( 'post_type', array( 'campaign' ) );
+
+    return $query;
 }
 
 ?>

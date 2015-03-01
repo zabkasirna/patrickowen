@@ -1,8 +1,8 @@
 <?php
-/*
-Author: Sirna
-URL: https://github.com/zabkasirna
-*/
+/**
+ * @author Sirna <https://github.com/zabkasirna>
+ * @since 0.0.0
+ */
 
 // Load theme's core
 require_once( 'sirna-po15.php' );
@@ -17,7 +17,10 @@ function po_conf() {
     add_filter( 'the_generator', 'po_rss_version' );
 
     // Enqueue scripts & styles
-    add_action( 'wp_enqueue_script', 'po_scripts_and_styles', 999 );
+    add_action( 'wp_enqueue_scripts', 'po_scripts_and_styles', 999 );
+
+    // Modify post queue
+    add_filter( 'pre_get_posts', 'get_campaign_for_home' );
 
     // theme support after theme setup
     po_theme_support();

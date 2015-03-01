@@ -1,14 +1,33 @@
-/*
-Theme Name: Sirna PO15
-Theme URI: https://github.com/zabkasirna/patrickowen
-Author: Sirna
-Author URI: https://github.com/zabkasirna
-Description: Theme for patrickowen site
-Version: 0.0.1
-License: MIT
-Text Domain: sirna-po15
-*/
+@import "base/doc";
 
-.test {
-    display: flex;
-}
+/* ------ {{ ie-toggle }} ------ */
+$old: false;
+
+/* ------ {{ normalize }} ------ */
+@import "vendor/normalize/normalize";
+
+/* ------ {{ compass-mixins }} ------ */
+@import "vendor/compass-mixins/compass";
+@import "vendor/compass-mixins/compass/layout";
+@import "vendor/compass-mixins/compass/support";
+
+/* ------ {{ sirna-functions }} ------ */
+@import "function/sirna-parse-int";
+@import "function/sirna-rem-px";
+@import "function/sirna-unit-scale";
+
+/* ------ {{ sirna-mixins }} ------ */
+@import "mixin/sirna-clearfix";
+@import "mixin/sirna-font-face";
+@import "mixin/sirna-font-icon";
+@import "mixin/sirna-media-query";
+@import "mixin/sirna-transition";
+
+/* ------ {{ base }} ------ */
+@import "base/font";
+@import "base/color";
+@import "base/setting";
+
+/* ------ {{ object }} ------ */
+@import "object/global/element";
+@import "object/global/text";

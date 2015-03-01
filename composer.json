@@ -1,0 +1,60 @@
+{
+    "name": "sirna/patrickowen",
+    "description": "project package for patrickowen site",
+    "license": "proprietary",
+    "homepage": "http://patrickowen.dev",
+    "authors": [
+        {
+            "name": "Sirna",
+            "email": "f@kema.il",
+            "homepage": "http://sirna.id",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "wordpress",
+                "type": "webroot",
+                "version": "4.1.1",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/WordPress/WordPress/archive/4.1.1.zip"
+                },
+                "require": {
+                    "fancyguy/webroot-installer": "1.1.0"
+                }
+            }
+        },
+        {
+            "type": "composer",
+            "url": "http://wpackagist.org"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "wordpress": "4.1.1"
+    },
+    "config": {
+        "bin-dir": "bin/",
+        "process-timeout": 1000
+    },
+    "extra": {
+        "webroot-dir": "site",
+        "webroot-package": "wordpress",
+        "installer-paths": {
+            "content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "content/themes/{$name}/": ["type:wordpress-theme"]
+        }
+    },
+    "require-dev": {
+        "wpackagist-plugin/developer": "1.2.5",
+        "wpackagist-plugin/debug-bar": "0.8.2",
+        "wpackagist-plugin/query-monitor": "2.6.10",
+        "wpackagist-plugin/theme-check": "20141222.1",
+        "wpackagist-plugin/unyson": "2.1.25",
+        "wpackagist-plugin/wordpress-database-reset": "2.3.1",
+        "wpackagist-plugin/reveal-template": "3.1"
+    }
+}

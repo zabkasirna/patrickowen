@@ -1,13 +1,33 @@
 <?php
-// get_header(); 
+/**
+ * @package sirna-po15
+ * @subpackage index
+ * @since 0.0.0
+ */
 
-// if ( have_posts() ) :
-//     while ( have_posts() ) : the_post();
-//         // Post
-//     endwhile;
-// else :
-//     // keine Posts vorhanden
-// endif;
+get_header(); ?>
 
-// get_sidebar();
-// get_footer();
+    <div id="content">
+        <div id="inner-content">
+            <main id="main" role="main">
+        
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        
+                <p><?php the_title(); ?></p>
+                <section>
+                    <?php the_content(); ?>
+                </section>
+        
+                <?php endwhile; ?>
+        
+            <?php else : ?>
+        
+                <p>no home</p>
+        
+            <?php endif; ?>
+        
+            </main><!-- #main -->
+        </div><!-- #inner-content -->
+    </div>
+
+<?php get_footer(); ?>

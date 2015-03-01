@@ -1,0 +1,8 @@
+$font-url: 'font/';
+
+@include s-font-face( 'SansBold', 'Nexa Bold', $font-url, 700, normal );
+@include s-font-face( 'SansRegular', 'Nexa Light', $font-url, 400, normal );
+
+$ff-sans-bold:      SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-sans-regular:   SansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-sans-test:      SansBold, Georgia;

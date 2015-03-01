@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "843e45dd86666fba1dbb1daf3b948c65",
+    "hash": "0fa8dff9a3df44e3723f63f400b59e67",
     "packages": [
         {
             "name": "fancyguy/webroot-installer",
@@ -220,6 +220,26 @@
             "homepage": "https://wordpress.org/plugins/query-monitor/"
         },
         {
+            "name": "wpackagist-plugin/reveal-template",
+            "version": "3.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/reveal-template/",
+                "reference": "tags/3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/reveal-template.3.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/reveal-template/"
+        },
+        {
             "name": "wpackagist-plugin/theme-check",
             "version": "20141222.1",
             "source": {
@@ -238,6 +258,46 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/theme-check/"
+        },
+        {
+            "name": "wpackagist-plugin/unyson",
+            "version": "2.1.25",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/unyson/",
+                "reference": "tags/2.1.25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/unyson.2.1.25.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/unyson/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-database-reset",
+            "version": "2.3.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wordpress-database-reset/",
+                "reference": "tags/2.3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wordpress-database-reset.2.3.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-database-reset/"
         }
     ],
     "aliases": [],

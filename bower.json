@@ -22,9 +22,15 @@
   ],
   "dependencies": {
     "jquery": "~2.1.3",
-    "modernizr": "~2.8.3"
+    "modernizr": "~2.8.3",
+    "fontawesome": "~4.3.0"
   },
   "overrides": {
-      "modernizr": { "main": "modernizr.js" }
+    "modernizr": {
+      "main": "modernizr.js"
+    }
+  },
+  "devDependencies": {
+    "compass-mixins": "~1.0.2"
   }
 }
