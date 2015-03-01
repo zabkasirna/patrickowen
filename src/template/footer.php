@@ -5,9 +5,8 @@
  * @since 0.0.0
  */
 ?>
-    </div><!-- .site-content -->
 
-</div><!-- .site -->
+</div><!-- #page -->
 
 <?php wp_footer(); ?>
 

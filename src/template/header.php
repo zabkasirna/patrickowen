@@ -33,4 +33,12 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-    <div id="content" class="site-content">
+    <header class="header">
+        <div class="header-inner">
+            
+            <div class="header-brand">
+                <h1><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
+            </div>
+
+        </div><!-- .header-inner -->
+    </header><!-- .header -->

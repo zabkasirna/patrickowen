@@ -20,7 +20,7 @@ function po_conf() {
     add_action( 'wp_enqueue_scripts', 'po_scripts_and_styles', 999 );
 
     // Modify post queue
-    add_filter( 'pre_get_posts', 'get_campaign_for_home' );
+    // add_filter( 'pre_get_posts', 'get_campaign_for_home' );
 
     // theme support after theme setup
     po_theme_support();

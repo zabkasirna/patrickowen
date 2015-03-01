@@ -71,10 +71,9 @@ add_action( 'init', 'register_cpt_campaigns', 0 );
  * [http://code.tutsplus.com/tutorials/a-guide-to-wordpress-custom-post-types-taxonomies-admin-columns-filters-and-archives--wp-27898]
  */
 
-function include_campaign_template() {
-    
-    if ( get_post_type() == 'campaign' ) {
+function include_campaign_template( $template_path ) {
 
+    if ( get_post_type() == 'campaign' ) {
 
         // Include single template
         if ( is_single() ) {
@@ -89,7 +88,7 @@ function include_campaign_template() {
         }
 
         // Include archive template
-        else if ( is_archive() ) {
+        elseif ( is_archive() ) {
 
             if ( $theme_file = locate_template( array( 'archive-campaign.php' ) ) ) {
                 $template_path = $theme_file;

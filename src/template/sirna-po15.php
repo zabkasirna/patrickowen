@@ -81,7 +81,6 @@ function po_scripts_and_styles() {
 
         wp_enqueue_script( 'po-jquery' );
         // wp_enqueue_script( 'po-js' );
-
     }
 }
 
@@ -144,12 +143,12 @@ function po_filter_ptags_on_images($content){
  * PO Campaign Plugin
  * [ http://justintadlock.com/archives/2010/02/02/showing-custom-post-types-on-your-home-blog-page ]
  */
-function get_campaign_for_home( $query ) {
+// function get_campaign_for_home( $query ) {
 
-    if ( is_home() && $query->is_main_query() )
-        $query->set( 'post_type', array( 'campaign' ) );
+//     if ( is_home() && $query->is_main_query() )
+//         $query->set( 'post_type', array( 'campaign' ) );
 
-    return $query;
-}
+//     return $query;
+// }
 
 ?>
