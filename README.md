@@ -94,6 +94,7 @@
 __Plugin Candidates:__
 
 *   __Image Mapping:__
+    *   [ImageMapper](https://wordpress.org/plugins/imagemapper)
     *   [Annotator Pro](http://codecanyon.net/item/annotator-pro-image-tooltips-zooming/9788132)
     *   [Visual Composer Add-on Image Hotspot with Tooltip](http://codecanyon.net/item/annotator-pro-image-tooltips-zooming/9788132)
     *   [HelloPins](http://codecanyon.net/item/hellopins/9563456)
