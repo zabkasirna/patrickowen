@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "af2f6e8567f3b4ba948ee7dc5a355add",
+    "hash": "01d4425d4398c04bd55312918bb48dae",
     "packages": [
         {
             "name": "composer/installers",
@@ -382,6 +382,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/woocommerce-dynamic-gallery/"
+        },
+        {
+            "name": "wpackagist-plugin/woocommerce-product-archive-customiser",
+            "version": "0.5.0",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/woocommerce-product-archive-customiser/",
+                "reference": "tags/0.5.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/woocommerce-product-archive-customiser.0.5.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woocommerce-product-archive-customiser/"
         },
         {
             "name": "wpackagist-plugin/zwoom-woocommerce-product-image-zoom-extension-by-wisdmlabs",
