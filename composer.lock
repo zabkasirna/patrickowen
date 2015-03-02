@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "67a7b18eb1841eb624d97c111dc15e06",
+    "hash": "eb585d2f20fc1f295bd8d91e0608c5b7",
     "packages": [
         {
             "name": "composer/installers",
@@ -142,6 +142,26 @@
             "description": "A composer installer for libraries that live in an application webroot.",
             "homepage": "http://fancyguy.github.com/webroot-installer/",
             "time": "2013-03-15 17:51:14"
+        },
+        {
+            "name": "wpackagist-plugin/admin-toolbar-menus",
+            "version": "1.0.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/admin-toolbar-menus/",
+                "reference": "tags/1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/admin-toolbar-menus.1.0.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/admin-toolbar-menus/"
         },
         {
             "name": "wpackagist-plugin/ewww-image-optimizer",
