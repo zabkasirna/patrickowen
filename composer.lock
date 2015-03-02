@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "eb585d2f20fc1f295bd8d91e0608c5b7",
+    "hash": "af2f6e8567f3b4ba948ee7dc5a355add",
     "packages": [
         {
             "name": "composer/installers",
@@ -242,6 +242,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/newsletter/"
+        },
+        {
+            "name": "wpackagist-plugin/revision-control",
+            "version": "2.3.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/revision-control/",
+                "reference": "tags/2.3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/revision-control.2.3.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/revision-control/"
         },
         {
             "name": "wpackagist-plugin/woocommerce",

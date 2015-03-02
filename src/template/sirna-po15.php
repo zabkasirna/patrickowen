@@ -95,7 +95,7 @@ function po_theme_support() {
     add_theme_support( 'post-thumbnails' );
 
     // default thumb size
-    // set_post_thumbnail_size(125, 125, true);
+    set_post_thumbnail_size(240, 240, true);
 
     // wp rss
     // add_theme_support('automatic-feed-links');

@@ -45,7 +45,8 @@
         "wpackagist-plugin/newsletter": "3.6.7",
         "wpackagist-plugin/ewww-image-optimizer": "2.2.2",
         "wpackagist-plugin/menubar": "5.2",
-        "wpackagist-plugin/admin-toolbar-menus": "1.0.1"
+        "wpackagist-plugin/admin-toolbar-menus": "1.0.1",
+        "wpackagist-plugin/revision-control": "2.3.1"
     },
     "config": {
         "bin-dir": "bin/",
