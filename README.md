@@ -109,6 +109,7 @@ __Plugin Candidates:__
 *   __Woocommerce Addons__
     *   [WooCommerce Cart Tab](https://wordpress.org/plugins/woocommerce-all-currencies)
     *   [WooCommerce Customizer](https://wordpress.org/plugins/woocommerce-customizer/)
+    *   [Woocommerce Dynamic Gallery](https://wordpress.org/plugins/woocommerce-dynamic-gallery/)
     *   [WooCommerce Product Image Zoom - Zwoom](https://wordpress.org/plugins/zwoom-woocommerce-product-image-zoom-extension-by-wisdmlabs)
     *   [WooCommerce All Currencies](https://wordpress.org/plugins/woocommerce-cart-tab)
     *   [WooCommerce Attributes Menu Manager](https://wordpress.org/plugins/woocommerce-attributes-menu-manager)
@@ -116,3 +117,15 @@ __Plugin Candidates:__
     *   [WooCommerce Accepted Payment Methods](https://wordpress.org/plugins/woocommerce-accepted-payment-methods)
     *   [WooCommerce Add Form To Product](https://wordpress.org/support/view/plugin-reviews/woocommerce-add-form-to-product)
     *   [WooCommerce Products Image Swapper](http://codecanyon.net/item/woocommerce-products-image-swapper/6500661)
+
+*   __Form__
+    *   [Visual Form Builder](https://wordpress.org/plugins/visual-form-builder/screenshots/)
+
+*   __Newsletter__
+    *   [Newsletter](https://wordpress.org/plugins/newsletter/)
+
+*   __Image Optimizer__
+    *   [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/)
+
+*   __Menu__
+    *   [Menubar](https://wordpress.org/plugins/menubar/)
