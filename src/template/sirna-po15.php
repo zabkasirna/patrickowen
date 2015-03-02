@@ -112,6 +112,8 @@ function register_po_nav_menus() {
     $locations = array(
         'main-navi' => __( 'Site main navigations', 'text_domain' ),
         'footer-link' => __( 'Site secondary links', 'text_domain' ),
+        'cart-link' => __( 'Cart links', 'text_domain' ),
+        'socmed-link' => __( 'Social media links', 'text_domain' )
     );
     register_nav_menus( $locations );
 }
