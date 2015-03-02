@@ -99,6 +99,9 @@ function po_theme_support() {
 
     // wp rss
     // add_theme_support('automatic-feed-links');
+    
+    // woocommerce
+    add_theme_support( 'woocommerce' );
 
 } /* end po theme support */
 
