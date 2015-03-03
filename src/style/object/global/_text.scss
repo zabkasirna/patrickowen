@@ -77,7 +77,7 @@ p {
 
 a {
     @include transition(color .3s ease-out, background-color .3s ease-out);
-    @include link-colors($black, $red, $black, $black, $black);
+    @include link-colors($black, $black, $black, $black, $black);
     @include reset-box-model;
 
     font-family: inherit;
