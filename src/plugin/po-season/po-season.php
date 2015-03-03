@@ -42,7 +42,7 @@ function register_taxonomy_season() {
         'show_in_nav_menus'          => true,
         'show_tagcloud'              => true,
         'query_var'                  => 'season',
-        'update_count_callback'      => 'update_season_count_cb',   );
+        'update_count_callback'      => 'update_season_count_cb'   );
     register_taxonomy( 'season', array( 'post', 'campaign', 'lookbook', 'catwalk', 'scarve', 'inspiration', 'expose' ), $args );
 
 }
