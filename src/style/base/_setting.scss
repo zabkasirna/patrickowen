@@ -106,11 +106,11 @@ $h_mb: (
 );
 
 @if ($old == false) {
-  $p-font-size: 1rem;
+  $p-font-size: .75rem;
   $p-line: 1.5rem;
 }
 @else {
-  $p-font-size: 16px;
+  $p-font-size: 13px;
   $p-line: 24px;
 }
 $p-lines: 1;
