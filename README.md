@@ -94,12 +94,38 @@
 __Plugin Candidates:__
 
 *   __Image Mapping:__
+    *   [ImageMapper](https://wordpress.org/plugins/imagemapper)
     *   [Annotator Pro](http://codecanyon.net/item/annotator-pro-image-tooltips-zooming/9788132)
     *   [Visual Composer Add-on Image Hotspot with Tooltip](http://codecanyon.net/item/annotator-pro-image-tooltips-zooming/9788132)
     *   [HelloPins](http://codecanyon.net/item/hellopins/9563456)
     *   [Woo Product Viewer with Hotspot](http://codecanyon.net/item/woo-product-viewer-with-hotspot/8204639)
+    *   [Image - Hotspots](http://tekanewascripts.info/composer/image-hotspots/)
     *   [Lite Tooltip](http://codecanyon.net/item/lite-tooltip-responsive-wordpress-plugin/4165378)
 
 *   __Ajax Stuff:__
     *   [Ajaxinate](https://github.com/synapticism/ajaxinate)
     *   [WP AJAX Page Loader](https://github.com/synapticism/wp-ajax-page-loader)
+
+*   __Woocommerce Addons__
+    *   [WooCommerce Cart Tab](https://wordpress.org/plugins/woocommerce-all-currencies)
+    *   [WooCommerce Customizer](https://wordpress.org/plugins/woocommerce-customizer/)
+    *   [Woocommerce Dynamic Gallery](https://wordpress.org/plugins/woocommerce-dynamic-gallery/)
+    *   [WooCommerce Product Image Zoom - Zwoom](https://wordpress.org/plugins/zwoom-woocommerce-product-image-zoom-extension-by-wisdmlabs)
+    *   [WooCommerce All Currencies](https://wordpress.org/plugins/woocommerce-cart-tab)
+    *   [WooCommerce Attributes Menu Manager](https://wordpress.org/plugins/woocommerce-attributes-menu-manager)
+    *   [WooCommerce Admin Bar Addition](https://wordpress.org/plugins/woocommerce-admin-bar-addition)
+    *   [WooCommerce Accepted Payment Methods](https://wordpress.org/plugins/woocommerce-accepted-payment-methods)
+    *   [WooCommerce Add Form To Product](https://wordpress.org/support/view/plugin-reviews/woocommerce-add-form-to-product)
+    *   [WooCommerce Products Image Swapper](http://codecanyon.net/item/woocommerce-products-image-swapper/6500661)
+
+*   __Form__
+    *   [Visual Form Builder](https://wordpress.org/plugins/visual-form-builder/screenshots/)
+
+*   __Newsletter__
+    *   [Newsletter](https://wordpress.org/plugins/newsletter/)
+
+*   __Image Optimizer__
+    *   [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/)
+
+*   __Menu__
+    *   [Menubar](https://wordpress.org/plugins/menubar/)

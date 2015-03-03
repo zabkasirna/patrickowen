@@ -95,10 +95,13 @@ function po_theme_support() {
     add_theme_support( 'post-thumbnails' );
 
     // default thumb size
-    // set_post_thumbnail_size(125, 125, true);
+    set_post_thumbnail_size(240, 240, true);
 
     // wp rss
     // add_theme_support('automatic-feed-links');
+    
+    // woocommerce
+    add_theme_support( 'woocommerce' );
 
 } /* end po theme support */
 
@@ -112,6 +115,8 @@ function register_po_nav_menus() {
     $locations = array(
         'main-navi' => __( 'Site main navigations', 'text_domain' ),
         'footer-link' => __( 'Site secondary links', 'text_domain' ),
+        'cart-link' => __( 'Cart links', 'text_domain' ),
+        'socmed-link' => __( 'Social media links', 'text_domain' )
     );
     register_nav_menus( $locations );
 }
