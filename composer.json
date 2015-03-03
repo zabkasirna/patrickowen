@@ -33,6 +33,10 @@
         }
     ],
     "require": {
+        "php": ">=5.3.0",
+        "wordpress": "4.1.1",
+        "wpackagist-plugin/admin-menu-editor": "1.4.3",
+        "wpackagist-plugin/visual-form-builder": "2.8.1",
         "fancyguy/webroot-installer": "1.1.0",
         "wpackagist-plugin/woocommerce": "2.3.5",
         "wpackagist-plugin/woocommerce-cart-tab": "0.3.1",
@@ -67,8 +71,6 @@
         "wpackagist-plugin/query-monitor": "2.6.10",
         "wpackagist-plugin/theme-check": "20141222.1",
         "wpackagist-plugin/unyson": "2.1.25",
-        "wpackagist-plugin/wordpress-database-reset": "2.3.1",
-        "wpackagist-plugin/admin-menu-editor": "1.4.3",
-        "wpackagist-plugin/wp-optimize": "1.8.9.7"
+        "wpackagist-plugin/wordpress-database-reset": "2.3.1"
     }
 }
