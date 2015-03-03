@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6fd02f59b1e117be318c6046c5580f60",
+    "hash": "15460b1f1bf9e5732445bfc630e02c9b",
     "packages": [
         {
             "name": "composer/installers",
@@ -520,6 +520,26 @@
             "homepage": "https://wordpress.org/plugins/developer/"
         },
         {
+            "name": "wpackagist-plugin/hide-admin-bar",
+            "version": "0.2.6",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/hide-admin-bar/",
+                "reference": "tags/0.2.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/hide-admin-bar.0.2.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/hide-admin-bar/"
+        },
+        {
             "name": "wpackagist-plugin/query-monitor",
             "version": "2.6.10",
             "source": {
@@ -598,6 +618,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wordpress-database-reset/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-optimize",
+            "version": "1.8.9.7",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wp-optimize/",
+                "reference": "tags/1.8.9.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wp-optimize.1.8.9.7.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-optimize/"
         }
     ],
     "aliases": [],
