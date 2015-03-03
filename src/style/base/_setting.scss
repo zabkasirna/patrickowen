@@ -31,9 +31,9 @@ $base-border-radius: 2px;
 }
 @else {
   $h1-font-size: 59px;
-  $h1-line: 24px;
+  $h1-line: 72px;
 }
-$h1-lines: 3;
+$h1-lines: 2.5;
 $h1-line-height: $h1-line * $h1-lines;
 $h1-margin-top: 1 * $h1-line;
 $h1-margin-bottom: 1 * $h1-line;
@@ -44,7 +44,7 @@ $h1-margin-bottom: 1 * $h1-line;
 }
 @else {
   $h2-font-size: 37px;
-  $h2-line: 24px;
+  $h2-line: 48px;
 }
 $h2-lines: 2;
 $h2-line-height: $h2-line * $h2-lines;
@@ -199,3 +199,4 @@ $admin-medium: $container-home-reguler;
 // Site Variables.
 // ----------------------------------------------------------------------------/
 $z-header: 9999;
+$z-headline: 1000;

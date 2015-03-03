@@ -39,3 +39,10 @@ $old: false;
 @import "vendor/visual-form-builder/vfb";
 @import "vendor/unyson/fw";
 @import "vendor/unyson/frontend-grid";
+@import "vendor/unyson/extension";
+
+/* ------ {{ non-global object }} ------ */
+@import "object/title";
+
+/* ------ {{ debugger }} ------ */
+@import "object/global/debugger";
