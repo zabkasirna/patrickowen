@@ -71,6 +71,8 @@
         "wpackagist-plugin/query-monitor": "2.6.10",
         "wpackagist-plugin/theme-check": "20141222.1",
         "wpackagist-plugin/unyson": "2.1.25",
-        "wpackagist-plugin/wordpress-database-reset": "2.3.1"
+        "wpackagist-plugin/wordpress-database-reset": "2.3.1",
+        "wpackagist-plugin/wp-optimize": "1.8.9.7",
+        "wpackagist-plugin/hide-admin-bar": "0.2.6"
     }
 }
