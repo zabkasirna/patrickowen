@@ -9,4 +9,6 @@ var gulp = require('gulp')
 gulp.task( 'watch', function() {
     gulp.watch(config.markup.template.src, ['markups']);
     gulp.watch(config.markup.plugin.src, ['markups']);
+    gulp.watch(config.style.src+ '**/*.scss', ['styles']);
+
 });
