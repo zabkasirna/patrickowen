@@ -94,8 +94,8 @@ function po_theme_support() {
     // wp thumbnails (sizes handled in functions.php)
     add_theme_support( 'post-thumbnails' );
 
-    // default thumb size
-    set_post_thumbnail_size(240, 240, true);
+    // image sizes
+    set_post_thumbnail_size(1200, 9999);
 
     // wp rss
     // add_theme_support('automatic-feed-links');

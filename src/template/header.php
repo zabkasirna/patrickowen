@@ -37,8 +37,22 @@
         <div class="header-inner">
             
             <div class="header-brand">
-                <a href='index.php' rel=“nofollow”><img src='<?php echo get_template_directory_uri() . '/uploads/images/logo/logo.png' ?>'></a>
+                <a href='index.php' rel=“nofollow”>
+                    <object data='<?php echo get_template_directory_uri() . '/uploads/images/logo/logo-black.svg' ?>' type="image/svg+xml">Patrick Owen</object>
+                </a>
             </div>
 
         </div><!-- .header-inner -->
+
+        <?php 
+            $nav_main_defaults = array(
+                'theme_location'  => 'main-navi',
+                'container'       => 'nav',
+                'menu_class'      => 'nav',
+                'menu_id'         => 'nav-main'
+            );
+
+            wp_nav_menu ( $nav_main_defaults );
+        ?>
+
     </header><!-- .header -->
