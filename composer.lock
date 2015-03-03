@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3a38fe04f7847880c7b87b40f06924ec",
+    "hash": "e8860aad6797b5a85c0ed25112f66bf6",
     "packages": [
         {
             "name": "composer/installers",
@@ -204,6 +204,26 @@
             "homepage": "https://wordpress.org/plugins/newsletter/"
         },
         {
+            "name": "wpackagist-plugin/regenerate-thumbnails",
+            "version": "2.2.4",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/regenerate-thumbnails/",
+                "reference": "tags/2.2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/regenerate-thumbnails.2.2.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
+        },
+        {
             "name": "wpackagist-plugin/revision-control",
             "version": "2.3.1",
             "source": {
@@ -324,16 +344,16 @@
             "homepage": "https://wordpress.org/plugins/woocommerce-product-archive-customiser/"
         },
         {
-            "name": "wpackagist-plugin/woocommerce-product-labels-lite",
-            "version": "1.1",
+            "name": "wpackagist-plugin/woocommerce-product-details-customiser",
+            "version": "0.2.0",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/woocommerce-product-labels-lite/",
-                "reference": "tags/1.1"
+                "url": "http://plugins.svn.wordpress.org/woocommerce-product-details-customiser/",
+                "reference": "tags/0.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/woocommerce-product-labels-lite.1.1.zip",
+                "url": "http://downloads.wordpress.org/plugin/woocommerce-product-details-customiser.0.2.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -341,7 +361,67 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/woocommerce-product-labels-lite/"
+            "homepage": "https://wordpress.org/plugins/woocommerce-product-details-customiser/"
+        },
+        {
+            "name": "wpackagist-plugin/woocommerce-product-image-flipper",
+            "version": "0.2.0",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/woocommerce-product-image-flipper/",
+                "reference": "tags/0.2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/woocommerce-product-image-flipper.0.2.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woocommerce-product-image-flipper/"
+        },
+        {
+            "name": "wpackagist-plugin/woocommerce-product-sku-generator",
+            "version": "1.2.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/woocommerce-product-sku-generator/",
+                "reference": "tags/1.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/woocommerce-product-sku-generator.1.2.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woocommerce-product-sku-generator/"
+        },
+        {
+            "name": "wpackagist-plugin/yith-woocommerce-zoom-magnifier",
+            "version": "1.1.5",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/yith-woocommerce-zoom-magnifier/",
+                "reference": "tags/1.1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/yith-woocommerce-zoom-magnifier.1.1.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/yith-woocommerce-zoom-magnifier/"
         }
     ],
     "packages-dev": [
@@ -426,26 +506,6 @@
             "homepage": "https://wordpress.org/plugins/query-monitor/"
         },
         {
-            "name": "wpackagist-plugin/reveal-template",
-            "version": "3.1",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/reveal-template/",
-                "reference": "tags/3.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/reveal-template.3.1.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/reveal-template/"
-        },
-        {
             "name": "wpackagist-plugin/theme-check",
             "version": "20141222.1",
             "source": {
@@ -504,6 +564,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wordpress-database-reset/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-optimize",
+            "version": "1.8.9.7",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wp-optimize/",
+                "reference": "tags/1.8.9.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wp-optimize.1.8.9.7.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-optimize/"
         }
     ],
     "aliases": [],
