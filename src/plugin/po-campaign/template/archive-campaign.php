@@ -7,31 +7,34 @@
 
 get_header(); ?>
 
-    <div id="content">
+    <div id="content" class="<?php echo get_post_type(); ?>">
         <div id="inner-content">
             <main id="main" role="main">
-        
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        
-                <div class="fullheight-row">
-                    <div class="headline">
-                        <div class="headline-tax-outer">
-                            <p class="headline-tax"><?php echo get_post_type(); ?></p>
+
+            <?php if ( have_posts() ) : ?>
+
+                <div class="loop-outer">
+                    <?php while ( have_posts() ) : the_post(); ?>
+
+                    <?php // LOOP ?>
+                    <div class="loop" data-id="<?php echo the_id(); ?>">
+                        <section>
+                            <?php the_content(); ?>
+                        </section>
+                    </div>
+
+                    <?php // HEADLINE ?>
+                    <a href="<?php the_permalink(); ?>" class="headline" data-id="<?php echo the_id(); ?>">
+                        <div class="tax-outer">
+                            <p class="tax">CAMPAIGNS</p>
                         </div>
                         <div class="title-outer">
                             <h1 class="title"><?php the_title(); ?></h1>
                         </div>
-                    </div>
-                    <section>
-                        <?php the_content(); ?>
-                    </section>
+                    </a>
+        
+                    <?php endwhile; ?>
                 </div>
-        
-                <?php endwhile; ?>
-        
-            <?php else : ?>
-        
-                <p>no campaign</p>
         
             <?php endif; ?>
         

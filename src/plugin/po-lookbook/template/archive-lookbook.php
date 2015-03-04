@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-    <div id="content">
+    <div id="content" class="<?php echo get_post_type(); ?>">
         <div id="inner-content">
             <main id="main" role="main">
         
