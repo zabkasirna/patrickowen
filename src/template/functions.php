@@ -34,6 +34,17 @@ function po_conf() {
 
 add_action( 'after_setup_theme', 'po_conf' );
 
+/** Navigation */
+function toggle_nav_class( $classes, $item ) {
+    if ( in_array( 'current-menu-item', $classes ) ) {
+        $classes[] = 'active';
+    }
+
+    return $classes;
+}
+
+add_filter( 'nav_menu_css_class', 'toggle_nav_class', 10, 2 );
+
 /** Debugger */
 add_filter( 'template_include', 'var_template_include', 1000 );
 function var_template_include( $t ){
