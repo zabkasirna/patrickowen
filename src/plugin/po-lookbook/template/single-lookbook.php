@@ -31,7 +31,7 @@ get_header(); ?>
         
             <?php else : ?>
         
-                <p>no single lookbook</p>
+                <p>no lookbook found</p>
         
             <?php endif; ?>
         
