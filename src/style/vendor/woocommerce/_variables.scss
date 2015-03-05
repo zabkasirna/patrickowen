@@ -1,0 +1,15 @@
+// WooCommerce CSS Variables
+
+$woocommerce:      #a46497;
+
+$wc_primary:       #a46497;                                      // Primary colour for buttons (alt)
+$wc_primarytext:   desaturate(lighten($wc_primary, 50%), 18%);   // Text on primary colour bg
+
+$wc_secondary:     desaturate(lighten($wc_primary, 40%), 21%);   // Secondary buttons
+$wc_secondarytext: desaturate(darken($wc_secondary, 60%), 21%);  // Text on secondary colour bg
+
+$wc_highlight:     adjust-hue($wc_primary, 150deg);              // Prices, In stock labels, sales flash
+$wc_highlightext:  desaturate(lighten($wc_highlight, 50%), 18%); // Text on highlight colour bg
+
+$wc_contentbg:     #fff;                                         // Content BG - Tabs (active state)
+$wc_subtext:       #777;                                         // small, breadcrumbs etc
