@@ -8,3 +8,7 @@ $ff-sans-bold:      SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $ff-sans-regular:   SansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $ff-sans-alt:       SansAlt, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $ff-sans-test:      SansBold, Georgia;
+
+// Woocommerce fonts
+@include s-font-face( 'star', 'star', $font-url, 700, normal );
+@include s-font-face( 'WooCommerce', 'WooCommerce', $font-url, 700, normal );
