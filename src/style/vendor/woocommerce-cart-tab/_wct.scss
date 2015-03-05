@@ -52,8 +52,12 @@
             }
         }
     }
+
 }
+
 .cart-parent {
+    padding: 0.87rem;
+    height: 52px;;
     .amount {
         display: none;
     }
@@ -61,6 +65,7 @@
         text-transform: uppercase;
         font-size: $p-font-size;
         line-height: $p-line-height;
+        height: 52px;;
         font-family: $ff-sans-regular;
         text-align: center;
     }
