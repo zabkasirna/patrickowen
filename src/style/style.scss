@@ -28,13 +28,9 @@ $old: false;
 @import "base/color";
 @import "base/setting";
 
-/* ------ {{ object }} ------ */
+/* ------ {{ global object }} ------ */
 @import "object/global/element";
 @import "object/global/text";
-@import "object/global/page";
-@import "object/global/header";
-@import "object/global/footer";
-@import "object/global/nav";
 
 /* ------ {{ vendors }} ------ */
 @import "vendor/unyson/fw";
@@ -45,6 +41,10 @@ $old: false;
 @import "vendor/woocommerce-cart-tab/wct";
 
 /* ------ {{ non-global object }} ------ */
+@import "object/page";
+@import "object/header";
+@import "object/footer";
+@import "object/nav";
 @import "object/title";
 
 /* ------ {{ debugger }} ------ */
