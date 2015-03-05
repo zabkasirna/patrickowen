@@ -37,14 +37,19 @@ $old: false;
 @import "object/global/nav";
 
 /* ------ {{ vendors }} ------ */
-@import "vendor/visual-form-builder/vfb";
-@import "vendor/woocommerce-cart-tab/wct";
 @import "vendor/unyson/fw";
 @import "vendor/unyson/frontend-grid";
 @import "vendor/unyson/extension";
+@import "vendor/visual-form-builder/vfb";
+@import "vendor/woocommerce/woocommerce";
+@import "vendor/woocommerce-cart-tab/wct";
 
 /* ------ {{ non-global object }} ------ */
 @import "object/title";
 
 /* ------ {{ debugger }} ------ */
 @import "object/global/debugger";
+
+
+/* ------ {{ shame }} ------ */
+.woocommerce div.product form.cart div.quantity { float: none; }
