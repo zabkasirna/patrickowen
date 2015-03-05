@@ -153,4 +153,16 @@ function po_filter_ptags_on_images($content){
 //     return $query;
 // }
 
+/**
+ * Woocommerce
+ */
+
+function powc_dequeue_styles( $enqueue_styles ) {
+    unset( $enqueue_styles[ 'woocommerce-general' ] );
+    unset( $enqueue_styles[ 'woocommerce-layout' ] );
+    unset( $enqueue_styles[ 'woocommerce-smallscreen' ] );
+
+    return $enqueue_styles;
+}
+
 ?>

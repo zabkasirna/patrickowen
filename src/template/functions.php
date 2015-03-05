@@ -45,6 +45,12 @@ function toggle_nav_class( $classes, $item ) {
 
 add_filter( 'nav_menu_css_class', 'toggle_nav_class', 10, 2 );
 
+/**
+ * Woocommerce
+ */
+
+add_filter( 'woocommerce_enqueue_styles', 'powc_dequeue_styles' );
+
 /** Debugger */
 add_filter( 'template_include', 'var_template_include', 1000 );
 function var_template_include( $t ){
