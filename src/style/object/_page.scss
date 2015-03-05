@@ -1,0 +1,26 @@
+#page {
+    position: relative;
+}
+
+#main {
+    @media ( min-width: 839px ) { padding: 0 x(1) 0 x(5); }
+
+    &:after {
+
+        content: '';
+        display: block;
+        position: fixed;
+        top: 0; right: 0; bottom: 0; left: 0;
+
+        border: x(1) solid $white;
+
+        pointer-events: none;
+
+    }
+
+    body.page & {
+        padding: x(4) x(1) 0 x(7);
+        // @media ( min-width: 839px ) { padding: 0 x(1) 0 x(5); }
+    }
+
+}

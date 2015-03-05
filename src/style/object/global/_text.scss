@@ -42,7 +42,8 @@ em, i, .italic {
 /* ------ {{ headings }} ------ */
 
 @for $i from 1 through 6 {
-    h#{$i} {
+    h#{$i},
+    .h#{$i} {
         @if ($i > 4) {$i: 4;}
         font-size: nth($h_fz, $i);
         line-height: nth($h_lh, $i);
@@ -50,6 +51,10 @@ em, i, .italic {
         margin-bottom: nth($h_mb, $i);
 
         font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+
+        letter-spacing: 0.1em;
+
+        &:first-of-type { margin-top: 0; }
     }
 }
 
@@ -85,6 +90,8 @@ a {
     line-height: inherit;
 
     text-decoration: none;
+
+    color: inherit;
 
     &:hover, &:active, &:focus {
         text-decoration: none;
@@ -172,3 +179,6 @@ hr {
 pre, code {
     font-family: monospace;
 }
+
+/* ------ {{ others }} ------ */
+.uc { text-transform: uppercase; }

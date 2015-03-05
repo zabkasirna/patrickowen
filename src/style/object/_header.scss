@@ -1,6 +1,5 @@
 .header {
     position: fixed;
-    top: x(2);
     left: 0;
     z-index: $z-header;
 
@@ -9,5 +8,7 @@
         width: x(15);
         height: x(3);
         overflow: hidden;
+
+        & > object { pointer-events: none; }
     }
 }

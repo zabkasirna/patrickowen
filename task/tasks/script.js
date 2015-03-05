@@ -2,74 +2,78 @@
  * SCRIPTS
  ** ------------------------------------------------------------------------- */
 
-var browserify = require('browserify')
-,   watchify   = require('watchify')
-,   c          = require('../configs/config')
-,   errors     = require('../utils/error-handler')
-,   logger     = require('../utils/bundle-logger')
-,   gulp       = require('gulp')
-,   source     = require('vinyl-source-stream')
-,   stringify  = require('stringify')
-,   size       = require('gulp-size')
-;
+var gulp         = require('gulp');
+var source       = require('vinyl-source-stream');
+var config       = require('../configs/config').browserify;
+var browserify   = require('browserify');
+var watchify     = require('watchify');
+var bundleLogger = require('../utils/bundle-logger');
+var handleErrors = require('../utils/error-handler');
 
-gulp.task('scripts', ['lint'], function() {
-    var file = 'app';
+gulp.task('script', function(callback) {
 
-    var browserifyOptions = {
-            entries    : [ c.indir + c.scriptdir + file ],
-            extensions : [ '.js' ],
-            debug      : true
-        };
+  var bundleQueue = config.bundleConfigs.length;
 
-    var bundleStream = browserify( browserifyOptions ).transform( stringify(['.html']) );
+  var browserifyThis = function(bundleConfig) {
 
-    var bundle = function() {
-        logger.start();
+    var bundler = browserify({
+      // Required watchify args
+      cache: {}, packageCache: {}, fullPaths: false,
+      // Specify the entry point of your app
+      entries: bundleConfig.entries,
+      // Add file extentions to make optional in your requires
+      extensions: config.extensions,
+      // Enable source maps!
+      debug: config.debug
+    });
 
-        return bundleStream.bundle()
-            .on( 'error', errors )
-            .pipe( source( file + '.js' ) )
-            .pipe( gulp.dest( c.outdir + c.scriptdir ) )
-            .on( 'update', bundle )
-            .on( 'end', logger.end )
-        ;
+    if(config.transforms && config.transforms.uglifyify){
+      bundler.transform({
+        global: true
+      }, 'uglifyify');
     }
 
+    var bundle = function() {
+      // Log when bundling starts
+      bundleLogger.start(bundleConfig.outputName);
+
+      return bundler
+        .bundle()
+        // Report compile errors
+        .on('error', handleErrors)
+        // Use vinyl-source-stream to make the
+        // stream gulp compatible. Specifiy the
+        // desired output filename here.
+        .pipe(source(bundleConfig.outputName))
+        // Specify the output destination
+        .pipe(gulp.dest(bundleConfig.dest))
+        .on('end', reportFinished);
+    };
+
+    if(global.isWatching) {
+      // Wrap with watchify and rebundle on changes
+      bundler = watchify(bundler);
+      // Rebundle on update
+      bundler.on('update', bundle);
+    }
+
+    var reportFinished = function() {
+      // Log when bundling completes
+      bundleLogger.end(bundleConfig.outputName)
+
+      if(bundleQueue) {
+        bundleQueue--;
+        if(bundleQueue === 0) {
+          // If queue is empty, tell gulp the task is complete.
+          // https://github.com/gulpjs/gulp/blob/master/docs/API.md#accept-a-callback
+          callback();
+        }
+      }
+    };
+
     return bundle();
+  };
+
+  // Start bundling with Browserify for each bundleConfig specified
+  config.bundleConfigs.forEach(browserifyThis);
 });
-
-// var browserifyThis = function( callback, devmode ) {
-
-//     var bundleStream = browserify( c.browserifyOptions )
-//         .transform(stringify([ '.html' ]));
-
-//     var reportDone = function() {
-//         logger.end( devmode );
-//     };
-
-//     var bundle = function() {
-//         logger.start( devmode );
-
-//         return bundleStream
-//             .bundle()
-//             .on('error', errors)
-//             .pipe(source('app.js'))
-//             .pipe(gulp.dest(c.outdir + c.scriptdir))
-//             .on('end', reportDone )
-//         ;
-//     };
-
-//     if ( devmode ) {
-//         bundleStream = watchify( bundleStream );
-
-//         bundleStream.on('update', bundle);
-//         logger.watch();
-//     }
-
-//     return bundle();
-// }
-
-// gulp.task('scripts', ['lint', 'templates'], browserifyThis);
-
-// module.exports = browserifyThis;

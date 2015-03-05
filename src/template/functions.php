@@ -34,6 +34,25 @@ function po_conf() {
 
 add_action( 'after_setup_theme', 'po_conf' );
 
+/** Navigation */
+function toggle_nav_class( $classes, $item ) {
+    if ( in_array( 'current-menu-item', $classes ) ) {
+        $classes[] = 'active';
+    }
+
+    return $classes;
+}
+
+add_filter( 'nav_menu_css_class', 'toggle_nav_class', 10, 2 );
+
+/**
+ * Woocommerce
+ */
+
+add_filter( 'woocommerce_enqueue_styles', 'powc_dequeue_styles' );
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+// remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20, 0 );
+
 /** Debugger */
 add_filter( 'template_include', 'var_template_include', 1000 );
 function var_template_include( $t ){

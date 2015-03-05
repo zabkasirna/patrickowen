@@ -13,16 +13,25 @@ get_header(); ?>
         
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-                <p><?php the_title(); ?></p>
                 <section>
                     <?php the_content(); ?>
                 </section>
+
+                <?php // HEADLINE ?>
+                <div class="headline">
+                    <div class="tax-outer">
+                        <p class="tax">CATWALK</p>
+                    </div>
+                    <div class="title-outer">
+                        <h1 class="title show"><?php the_title(); ?></h1>
+                    </div>
+                </div>
         
                 <?php endwhile; ?>
         
             <?php else : ?>
         
-                <p>no single catwalk</p>
+                <p>no catwalk found</p>
         
             <?php endif; ?>
         
