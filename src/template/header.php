@@ -37,13 +37,14 @@
         <div class="header-inner">
             
             <div class="header-brand">
-                <a href='index.php' rel="nofollow" class="header-link">
+                <a href='/' rel="nofollow" class="header-link">
                     <object data='<?php echo get_template_directory_uri() . '/uploads/images/logo/logo-black.svg' ?>' type="image/svg+xml">Patrick Owen</object>
                 </a>
             </div>
 
         </div><!-- .header-inner -->
 
+        <!-- Main Navigation -->
         <?php 
             $nav_main_defaults = array(
                 'theme_location'  => 'main-navi',

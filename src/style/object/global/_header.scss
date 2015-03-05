@@ -8,5 +8,7 @@
         width: x(15);
         height: x(3);
         overflow: hidden;
+
+        & > object { pointer-events: none; }
     }
 }

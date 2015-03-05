@@ -106,7 +106,7 @@ $h_mb: (
 );
 
 @if ($old == false) {
-  $p-font-size: .75rem;
+  $p-font-size: .8125rem;
   $p-line: 1.5rem;
 }
 @else {
@@ -115,7 +115,7 @@ $h_mb: (
 }
 $p-lines: 1;
 $p-line-height: $p-line * $p-lines;
-$p-margin-top: 1 * $p-line;
+$p-margin-top: .5 * $p-line;
 $p-margin-bottom: 1 * $p-line;
 
 // ----------------------------------------------------------------------------\

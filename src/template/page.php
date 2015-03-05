@@ -12,13 +12,11 @@ get_header(); ?>
             <main id="main" role="main">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-                // page content template.
-                the_content();
+                <h1 class="h2 uc"><?php the_title();?></h1>
+                <?php the_content();?>
 
-            // End the loop.
-            <?php endwhile; else : ?>
-            <?php endif; ?>
-                <p>no post found</p>
+            <?php // End the loop. ?>
+            <?php endwhile; endif; ?>
             </main><!-- #main -->
         </div><!-- #inner-content -->
     </div>
