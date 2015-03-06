@@ -15,7 +15,7 @@ $(window).on('load', function() {
     Product.init.quantity.stepper();
     Product.init.variant.selecter();
 
-    // Newsletter
+    //Newsletter
     Newsletter.init.selecter();
 
 });

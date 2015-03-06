@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7938bb4e446e286757e56a980cb6021f",
+    "hash": "d54b3327e2f6466bf68ab5368c00a1a1",
     "packages": [
         {
             "name": "composer/installers",
@@ -207,7 +207,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/newsletter.zip",
+                "url": "https://downloads.wordpress.org/plugin/newsletter.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -438,6 +438,26 @@
             "homepage": "https://wordpress.org/plugins/woocommerce-product-sku-generator/"
         },
         {
+            "name": "wpackagist-plugin/wysija-newsletters",
+            "version": "2.6.15",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wysija-newsletters/",
+                "reference": "tags/2.6.15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wysija-newsletters.2.6.15.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wysija-newsletters/"
+        },
+        {
             "name": "wpackagist-plugin/yith-woocommerce-zoom-magnifier",
             "version": "1.1.5",
             "source": {
@@ -509,7 +529,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/hide-admin-bar.0.2.6.zip",
+                "url": "https://downloads.wordpress.org/plugin/hide-admin-bar.0.2.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -629,7 +649,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wp-optimize.1.8.9.7.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-optimize.1.8.9.7.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -644,6 +664,7 @@
     "minimum-stability": "stable",
     "stability-flags": [],
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "php": ">=5.3.0"
     },

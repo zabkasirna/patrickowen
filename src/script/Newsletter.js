@@ -6,7 +6,6 @@ var Newsletter = {
 
 function initSelect() {
     if ( !$( '.wysija-select' ).length ) return;
-
     var $el = $( '.wysija-select' );
 
     $el.selecter();
