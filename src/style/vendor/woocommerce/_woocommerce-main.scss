@@ -148,14 +148,19 @@ p.demo_store {
 
         .product_title {
             clear: none;
-            margin-top: 0;
             padding: 0;
         }
 
+        .price-outer {
+            margin: 0 0 x(.5) 0;
+        }        
+
         span.price,
         p.price {
-            color: $wc_highlight;
-            font-size: 1.25em;
+            color: $black;
+            font-size: $p-font-size;
+            font-weight: 700;
+            line-height: $p-line-height;
 
             ins {
                 background: inherit;
@@ -169,15 +174,17 @@ p.demo_store {
         }
 
         p.stock {
-            font-size: 0.92em;
+            font-size: $p-font-size;
+            font-weight: 700;
+            line-height: $p-line-height;
         }
 
         .stock {
-            color: $wc_highlight;
+            color: $black;
         }
 
         .out-of-stock {
-            color: red;
+            color: $red;
         }
 
         .woocommerce-product-rating{
@@ -185,7 +192,7 @@ p.demo_store {
         }
 
         div.images {
-            margin-bottom: 2em;
+            margin: 0;
 
             img {
                 display: block;
@@ -195,12 +202,12 @@ p.demo_store {
             }
 
             div.thumbnails {
-                padding-top: 1em;
+                padding: x(.5) 0 0 0;
             }
         }
 
         div.summary {
-            margin-bottom: 2em;
+            margin-bottom: x(.5);
         }
 
         div.social {
@@ -328,12 +335,28 @@ p.demo_store {
         }
 
         form.cart {
-            margin-bottom: 2em;
             @include clearfix();
+            overflow: visible;
 
             div.quantity {
-                float: left;
-                margin: 0 4px 0 0;
+                @include s-clearfix();
+                height: x(1);
+                width: 100%;
+                position: relative;
+                float: none;
+                margin: 0 0 x(.5) 0;
+
+                label {
+                    float: left;
+                    width: x(3);
+                    margin-right: x(.5);
+                    text-transform: uppercase;
+
+                    & + div {
+                        float: none;
+                        clear: right;
+                    }
+                }
             }
 
             table {
@@ -566,16 +589,17 @@ p.demo_store {
         line-height: 1;
         cursor: pointer;
         position: relative;
-        font-family: inherit;
+        font-family: $ff-sans-bold;
         text-decoration: none;
         overflow: visible;
         padding: .618em 1em;
         font-weight: 700;
-        border-radius: 3px;
+        border-radius: 0;
+        border: 1px solid $black;
         left: auto;
         color: $wc_secondarytext;
         background-color: $wc_secondary;
-        border: 0;
+        text-transform: uppercase;
         white-space: nowrap;
         display: inline-block;
         background-image: none;

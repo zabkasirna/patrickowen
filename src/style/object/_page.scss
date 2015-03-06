@@ -3,24 +3,25 @@
 }
 
 #main {
-    @media ( min-width: 839px ) { padding: 0 x(1) 0 x(5); }
+    @include s-clearfix();
 
-    &:after {
+    @media ( min-width: 839px ) { padding: x(.5) x(1) x(.5) x(5); }
 
-        content: '';
-        display: block;
-        position: fixed;
-        top: 0; right: 0; bottom: 0; left: 0;
+    // &:after {
 
-        border: x(1) solid $white;
+    //     content: '';
+    //     display: block;
+    //     position: fixed;
+    //     top: 0; right: 0; bottom: 0; left: 0;
 
-        pointer-events: none;
+    //     border: x(1) solid $white;
 
-    }
+    //     pointer-events: none;
+
+    // }
 
     body.page & {
         padding: x(4) x(1) 0 x(7);
-        // @media ( min-width: 839px ) { padding: 0 x(1) 0 x(5); }
     }
 
 }

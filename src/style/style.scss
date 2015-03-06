@@ -56,27 +56,11 @@ $old: false;
 
 /* ------ {{ shame }} ------ */
 .woocommerce div.product form.cart {
+
+    @include s-clearfix;
+    position: relative;
+
     label, input, p, a, li { font-family: $ff-sans-alt; }
-
-    div.quantity {
-        @include s-clearfix();
-        height: x(1);
-        width: 100%;
-        position: relative;
-        float: none;
-        margin: 0 0 x(.5) 0;
-
-        label {
-            float: left;
-            width: x(3);
-            margin-right: x(.5);
-
-            & + div {
-                float: none;
-                clear: right;
-            }
-        }
-    }
 }
 
 .fieldrow {
@@ -89,10 +73,33 @@ $old: false;
         display: block;
         float: left;
         width: x(3);
+        margin: 0 6px 0 0;
+        text-transform: uppercase;
+    }
+}
 
-        & + * {
-            clear: right;
-            float: none;
-        }
+.woocommerce-main-image {
+    display: block;
+    height: 100%;
+}
+
+.woocommerce {
+    .product_title {
+        text-transform: uppercase;
+        margin-bottom: x(.5);
+        max-width: x(15);
+    }
+}
+
+.product-buttons {
+    position: fixed;
+    bottom: x(1);
+    margin-top: x(2);
+    width: x(18);
+
+    button {
+        width: 100%;
+
+        &:last-child { margin-bottom: 0 !important; }
     }
 }

@@ -36,6 +36,9 @@ get_header( 'shop' ); ?>
                 }
 
                 if ( $product_cat_slug == 'heirloom' ) {
+
+                    remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40, 0);
+
                     wc_get_template_part( 'content', 'single-product-heirloom' );
                 }
                 else {

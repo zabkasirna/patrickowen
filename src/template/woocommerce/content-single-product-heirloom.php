@@ -25,16 +25,38 @@ if ( ! defined( 'ABSPATH' ) ) {
      }
 ?>
 
-<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="heirloom" <?php post_class(); ?>>
     <?php
-        /**
-         * woocommerce_before_single_product_summary hook
-         *
-         * @hooked woocommerce_show_product_sale_flash - 10
-         * @hooked woocommerce_show_product_images - 20
-         */
-        do_action( 'woocommerce_before_single_product_summary' );
+
+        global $post, $product;
+        $terms = get_the_terms( $post->ID, 'product_cat' );
+        foreach ($terms as $term) {
+            $product_cat_slug = $term->slug;
+            break;
+        }
+
+        if ( $product_cat_slug != 'heirloom' ) {
+            /**
+             * woocommerce_before_single_product_summary hook
+             *
+             * @hooked woocommerce_show_product_sale_flash - 10
+             * @hooked woocommerce_show_product_images - 20
+             */
+            do_action( 'woocommerce_before_single_product_summary' );
+        }
+
+        else {
+            
+            $attachment_ids = $product->get_gallery_attachment_ids();
+            
+            foreach( $attachment_ids as $attachment_id ) {
+                $attachment_link = wp_get_attachment_url( $attachment_id );
+
+                echo '<image src="' . $attachment_link . '"></img>';
+
+            }
+
+        }
     ?>
 
     <div class="summary entry-summary">

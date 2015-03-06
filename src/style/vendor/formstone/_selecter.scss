@@ -17,6 +17,9 @@
   height: x(1);
   width: x(5);
 }
+
+label + .selecter { float: left; }
+
 .selecter:focus {
   box-shadow: none;
   outline: none;
@@ -54,13 +57,14 @@
 }
 .selecter-selected {
   position: relative;
-  background: #ffffff;
-  border: 1px solid #cccccc;
+  background: $white;
+  // border: 1px solid #cccccc;
   color: $black;
   cursor: pointer;
   display: block;
   font-family: $ff-sans-alt;
-  font-size: 12px;
+  font-size: r(.8125rem);
+  text-transform: uppercase;
   line-height: $p-line-height;
   height: $p-line-height;
   margin: 0;
@@ -75,7 +79,7 @@
   width: 0;
   position: absolute;
   top: 0;
-  right: 15px;
+  right: 6px;
   bottom: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -96,9 +100,9 @@
   position: absolute;
   top: 100%;
   left: 0;
-  border: 1px solid #cccccc;
-  border-width: 0 1px 1px;
-  background-color: #ffffff;
+  border: 1px solid $black;
+  color: $white;
+  background-color: $black;
   display: none;
   margin: 0;
   overflow: auto;
@@ -123,11 +127,12 @@
 }
 .selecter-item {
   width: 100%;
-  background: $white;
-  border-bottom: 1px solid #cccccc;
-  color: $black;
+  background: $black;
+  border-bottom: 1px solid $black;
+  color: $white;
   cursor: pointer;
   display: block;
+  font-family: $ff-sans-alt;
   font-size: $p-font-size;
   line-height: $p-line-height;
   height: $p-line-height;
@@ -136,12 +141,14 @@
   padding: 0 x(.5);
   text-decoration: none;
   text-overflow: ellipsis;
+  text-transform: uppercase;
 }
 .selecter-item.placeholder {
   display: none;
 }
 .selecter-item.selected {
-  background: #eeeeee;
+  background: #EEE;
+  color: $black;
 }
 .selecter-item.disabled {
   color: #999999;
@@ -165,7 +172,7 @@
   background-color: #ffffff;
 }
 .selecter.open {
-  z-index: 3;
+  z-index: 60;
 }
 .selecter.open .selecter-selected {
   z-index: 51;

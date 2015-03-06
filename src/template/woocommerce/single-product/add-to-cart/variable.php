@@ -23,7 +23,7 @@ global $product, $post;
             
             <?php $loop = 0; foreach ( $attributes as $name => $options ) : $loop++; ?>
 
-                <div class="fieldrow">                    
+                <div class="fieldrow">
                     <label for="<?php echo sanitize_title( $name ); ?>"><?php echo wc_attribute_label( $name ); ?></label>
 
                     <select id="<?php echo esc_attr( sanitize_title( $name ) ); ?>" name="attribute_<?php echo sanitize_title( $name ); ?>" data-attribute_name="attribute_<?php echo sanitize_title( $name ); ?>">
@@ -62,14 +62,6 @@ global $product, $post;
                         ?>
                     </select>
                 </div>
-
-                <div class="fieldrow">
-                    <?php
-                        if ( sizeof( $attributes ) === $loop ) {
-                            echo '<a class="reset_variations" href="#reset">' . __( 'Clear selection', 'woocommerce' ) . '</a>';
-                        }
-                    ?>
-                </div>
             <?php endforeach;?>
         </div>
 
@@ -80,7 +72,6 @@ global $product, $post;
 
             <div class="variations_button">
                 <?php woocommerce_quantity_input(); ?>
-                <button type="submit" class="single_add_to_cart_button button alt"><?php echo $product->single_add_to_cart_text(); ?></button>
             </div>
 
             <input type="hidden" name="add-to-cart" value="<?php echo $product->id; ?>" />
@@ -88,6 +79,21 @@ global $product, $post;
             <input type="hidden" name="variation_id" class="variation_id" value="" />
 
             <?php do_action( 'woocommerce_after_single_variation' ); ?>
+        </div>
+
+        <div class="product-buttons">
+            <button type="submit" class="single_add_to_cart_button button alt"><?php echo $product->single_add_to_cart_text(); ?></button>
+            <?php
+                $terms = get_the_terms( $post->ID, 'product_cat' );
+                foreach ($terms as $term) {
+                    $product_cat_slug = $term->slug;
+                    break;
+                }
+            
+                if ( $product_cat_slug == 'heirloom' ) {
+                    echo '<button class="button">Continue Shopping</button>';
+                }
+            ?>
         </div>
 
         <?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
