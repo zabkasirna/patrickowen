@@ -32,3 +32,8 @@ body {
     font-size: $p-font-size;
     line-height: $p-line-height;
 }
+
+select {
+    height: x(1);
+    line-height: x(1);
+}

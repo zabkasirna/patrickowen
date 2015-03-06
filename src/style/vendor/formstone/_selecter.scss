@@ -8,11 +8,15 @@
 
 
 .selecter {
+  @include s-clearfix();
+
   position: relative;
   display: block;
-  margin: 10px 0;
+  margin: 0;
   z-index: 1;
-  max-width: 30%;
+  height: x(1);
+  width: x(5);
+  // max-width: 30%;
 }
 .selecter:focus {
   box-shadow: none;
@@ -32,7 +36,8 @@
   box-sizing: border-box;
 }
 .selecter-element {
-  width: 100%;
+  display: block;
+  width: x(5);
   height: 100%;
   position: absolute;
   left: 0;
@@ -52,16 +57,19 @@
   position: relative;
   background: #ffffff;
   border: 1px solid #cccccc;
-  color: #222222;
+  color: $black;
   cursor: pointer;
   display: block;
-  font-size: 13px;
+  font-family: $ff-sans-alt;
+  font-size: 12px;
+  line-height: $p-line-height;
+  height: $p-line-height;
   margin: 0;
   overflow: hidden;
-  padding: 10px 15px;
+  padding: 0 x(.5);
   text-overflow: clip;
   z-index: 2;
-  border-radius: 3px;
+  border-radius: 0;
 }
 .selecter-selected:after {
   height: 0;
@@ -98,8 +106,7 @@
   overflow-x: hidden;
   padding: 0;
   z-index: 50;
-  border-radius: 0 0 3px 3px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
 }
 .selecter-options.scroller {
   position: absolute;
@@ -117,15 +124,17 @@
 }
 .selecter-item {
   width: 100%;
-  background: #ffffff;
+  background: $white;
   border-bottom: 1px solid #cccccc;
-  color: #222222;
+  color: $black;
   cursor: pointer;
   display: block;
-  font-size: 13px;
+  font-size: $p-font-size;
+  line-height: $p-line-height;
+  height: $p-line-height;
   margin: 0;
   overflow: hidden;
-  padding: 10px 15px;
+  padding: 0 x(.5);
   text-decoration: none;
   text-overflow: ellipsis;
 }
@@ -161,24 +170,23 @@
 }
 .selecter.open .selecter-selected {
   z-index: 51;
-  border-radius: 3px 3px 0 0;
+  border-radius: 0;
 }
 .selecter.open .selecter-selected,
 .selecter.focus .selecter-selected {
   background-color: #ffffff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 .selecter.cover .selecter-options {
   border-width: 1px;
   top: 0;
-  border-radius: 3px;
+  border-radius: 0;
 }
 .selecter.cover .selecter-options .selecter-item.first {
-  border-radius: 3px 3px 0 0;
+  border-radius: 0;
 }
 .selecter.cover.open .selecter-selected {
-  z-index: 49;
-  border-radius: 3px 3px 0 0;
+  z-index: 51;
+  border-radius: 0;
 }
 .selecter.bottom .selecter-options {
   top: auto;
@@ -189,28 +197,27 @@
   border: none;
 }
 .selecter.bottom.open .selecter-selected {
-  border-radius: 0 0 3px 3px;
+  border-radius: 0;
 }
 .selecter.bottom.open .selecter-options {
-  border-radius: 3px 3px 0 0;
+  border-radius: 0;
 }
 .selecter.bottom .cover .selecter-options {
   top: auto;
   bottom: 0;
 }
 .selecter.bottom .cover.open .selecter-selected {
-  border-radius: 3px;
+  border-radius: 0;
 }
 .selecter.bottom .cover.open .selecter-options {
-  border-radius: 3px;
+  border-radius: 0;
 }
 .selecter.multiple .selecter-options {
   width: 100%;
   position: static;
   border-width: 1px;
   display: block;
-  border-radius: 3px;
-  box-shadow: none;
+  border-radius: 0;
 }
 .selecter.disabled .selecter-selected {
   background: #ffffff;

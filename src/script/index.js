@@ -1,6 +1,7 @@
 var Headline = require('./Headline')
 ,   Navigation = require('./Navigation')
 ,   Product = require('./Product')
+,   Newsletter = require('./Newsletter')
 ;
 
 $(window).on('load', function() {
@@ -12,5 +13,9 @@ $(window).on('load', function() {
 
     // Product
     Product.init.quantity.stepper();
+    Product.init.variant.selecter();
+
+    // Newsletter
+    Newsletter.init.selecter();
 
 });

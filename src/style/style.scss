@@ -54,7 +54,7 @@ $old: false;
 
 
 /* ------ {{ shame }} ------ */
-.woocommerce .product form.cart {
+.woocommerce div.product form.cart {
     label, input, p, a, li { font-family: $ff-sans-alt; }
 
     div.quantity {
@@ -74,6 +74,24 @@ $old: false;
                 float: none;
                 clear: right;
             }
+        }
+    }
+}
+
+.fieldrow {
+    @include s-clearfix();
+    position: relative;
+    width: 100%;
+    margin: 0 0 x(.5) 0;
+
+    label {
+        display: block;
+        float: left;
+        width: x(3);
+
+        & + * {
+            clear: right;
+            float: none;
         }
     }
 }

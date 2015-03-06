@@ -68,8 +68,9 @@ function po_scripts_and_styles() {
         // jquery transit
         wp_register_script( 'po-transit', get_template_directory_uri() . '/script/vendor/jquery.transit/jquery.transit.js', array( 'po-jquery' ), '', true );
 
-        // formstone stepper
+        // formstone UI
         wp_register_script( 'po-stepper', get_template_directory_uri() . '/script/vendor/Stepper/jquery.fs.stepper.js', array( 'po-jquery' ), '', true );
+        wp_register_script( 'po-selecter', get_template_directory_uri() . '/script/vendor/Selecter/jquery.fs.selecter.js', array( 'po-jquery' ), '', true );
 
         // site
         wp_register_script( 'po-js', get_template_directory_uri() . '/script/main.js', array( 'po-jquery' ), '', true );
@@ -80,6 +81,7 @@ function po_scripts_and_styles() {
         wp_enqueue_script( 'po-waypoints' );
         wp_enqueue_script( 'po-transit' );
         wp_enqueue_script( 'po-stepper' );
+        wp_enqueue_script( 'po-selecter' );
         wp_enqueue_script( 'po-js' );
 
         // main stylesheet
