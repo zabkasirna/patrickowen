@@ -1,6 +1,8 @@
 .debugger-template {
+    background-color: $white;
     position: fixed;
     left: x(1);
     bottom: x(.25);
     margin-bottom: -6px;
+    padding-right: x(.5);
 }

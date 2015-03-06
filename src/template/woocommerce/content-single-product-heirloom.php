@@ -34,8 +34,10 @@ if ( ! defined( 'ABSPATH' ) ) {
             $product_cat_slug = $term->slug;
             break;
         }
-
-        if ( $product_cat_slug != 'heirloom' ) {
+    ?>
+    
+    <?php if ( $product_cat_slug != 'heirloom' ):  ?>
+        <?php
             /**
              * woocommerce_before_single_product_summary hook
              *
@@ -43,21 +45,26 @@ if ( ! defined( 'ABSPATH' ) ) {
              * @hooked woocommerce_show_product_images - 20
              */
             do_action( 'woocommerce_before_single_product_summary' );
-        }
+        ?>
+    <?php else: ?>            
+        <div class="heirloom-product-outer">
+            <ul class="heirloom-product">
 
-        else {
-            
-            $attachment_ids = $product->get_gallery_attachment_ids();
-            
-            foreach( $attachment_ids as $attachment_id ) {
-                $attachment_link = wp_get_attachment_url( $attachment_id );
+            <?php $attachment_ids = array_reverse($product->get_gallery_attachment_ids()); ?>
 
-                echo '<image src="' . $attachment_link . '"></img>';
+            <?php foreach( $attachment_ids as $attachment_id ): $attachment_link = wp_get_attachment_url( $attachment_id );?>
+                <li class="heirloom-product-item">
+                    <img class="heirloom-product-image" src="<?php echo $attachment_link; ?>">
+                </li>
+            <?php endforeach; ?>
 
-            }
-
-        }
-    ?>
+            </ul>
+        </div>
+        <div class="heirloom-product-control">
+            <a href="#" class="hpc-prev">←</a>
+            <a href="#" class="hpc-next">→</a>
+        </div>
+    <?php endif; ?>
 
     <div class="summary entry-summary">
 

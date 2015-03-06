@@ -23,7 +23,7 @@ module.exports = {
     },
 
     image: {
-        src: src + '/image/**/*.{png,jpg,svg}',
+        src: src + '/image/**/*.{png,jpg,svg,gif}',
         dest: dest + '/uploads/images'
     },
 

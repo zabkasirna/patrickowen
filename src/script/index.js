@@ -18,4 +18,37 @@ $(window).on('load', function() {
     //Newsletter
     Newsletter.init.selecter();
 
+    // Heirloom
+    var _hpcCounter = 1;
+    $('.hpc-next').on('click', function( e ) {
+        e.preventDefault;
+
+        var parentH = $('.heirloom-product').height()
+        ,   $item = $('.heirloom-product-item');
+
+        if ( _hpcCounter < $item.length ) {
+            $item.each( function( i ) {
+                $(this).transition({
+                        y: '-=' + parentH
+                    });
+                });
+            _hpcCounter ++;
+        }
+    });
+    $('.hpc-prev').on('click', function( e ) {
+        e.preventDefault;
+
+        var parentH = $('.heirloom-product').height()
+        ,   $item = $('.heirloom-product-item');
+
+        if ( _hpcCounter > 1 ) {
+            $item.each( function( i ) {
+                $(this).transition({
+                        y: '+=' + parentH
+                    });
+                });
+            _hpcCounter --;
+        }
+    });
+
 });
