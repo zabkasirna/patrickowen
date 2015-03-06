@@ -40,6 +40,7 @@ $old: false;
 @import "vendor/woocommerce/woocommerce";
 @import "vendor/woocommerce-cart-tab/wct";
 @import "vendor/formstone/stepper";
+@import "vendor/formstone/selecter";
 
 /* ------ {{ non-global object }} ------ */
 @import "object/page";
@@ -53,7 +54,7 @@ $old: false;
 
 
 /* ------ {{ shame }} ------ */
-.woocommerce div.product form.cart {
+.woocommerce .product form.cart {
     label, input, p, a, li { font-family: $ff-sans-alt; }
 
     div.quantity {
