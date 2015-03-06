@@ -1,5 +1,7 @@
 var Headline = require('./Headline')
-,   Navigation = require('./Navigation');
+,   Navigation = require('./Navigation')
+,   Product = require('./Product')
+;
 
 $(window).on('load', function() {
     // Headline
@@ -7,5 +9,8 @@ $(window).on('load', function() {
 
     // Navigation
     Navigation.init.submenu();
+
+    // Product
+    Product.init.quantity.stepper();
 
 });
