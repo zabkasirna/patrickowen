@@ -39,6 +39,7 @@ $old: false;
 @import "vendor/visual-form-builder/vfb";
 @import "vendor/woocommerce/woocommerce";
 @import "vendor/woocommerce-cart-tab/wct";
+@import "vendor/formstone/stepper";
 
 /* ------ {{ non-global object }} ------ */
 @import "object/page";
@@ -52,4 +53,26 @@ $old: false;
 
 
 /* ------ {{ shame }} ------ */
-.woocommerce div.product form.cart div.quantity { float: none; }
+.woocommerce div.product form.cart {
+    label, input, p, a, li { font-family: $ff-sans-alt; }
+
+    div.quantity {
+        @include s-clearfix();
+        height: x(1);
+        width: 100%;
+        position: relative;
+        float: none;
+        margin: 0 0 x(.5) 0;
+
+        label {
+            float: left;
+            width: x(3);
+            margin-right: x(.5);
+
+            & + div {
+                float: none;
+                clear: right;
+            }
+        }
+    }
+}
