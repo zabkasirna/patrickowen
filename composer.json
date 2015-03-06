@@ -50,7 +50,8 @@
         "wpackagist-plugin/woocommerce-product-sku-generator": "1.2.1",
         "wpackagist-plugin/yith-woocommerce-zoom-magnifier": "1.1.5",
         "wpackagist-plugin/woocommerce-product-image-flipper": "0.2.0",
-        "wpackagist-plugin/regenerate-thumbnails": "2.2.4"
+        "wpackagist-plugin/regenerate-thumbnails": "2.2.4",
+        "wpackagist-plugin/wysija-newsletters": "2.6.15"
     },
     "config": {
         "bin-dir": "bin/",
