@@ -68,6 +68,9 @@ function po_scripts_and_styles() {
         // jquery transit
         wp_register_script( 'po-transit', get_template_directory_uri() . '/script/vendor/jquery.transit/jquery.transit.js', array( 'po-jquery' ), '', true );
 
+        // formstone stepper
+        wp_register_script( 'po-stepper', get_template_directory_uri() . '/script/vendor/Stepper/jquery.fs.stepper.js', array( 'po-jquery' ), '', true );
+
         // site
         wp_register_script( 'po-js', get_template_directory_uri() . '/script/main.js', array( 'po-jquery' ), '', true );
 
