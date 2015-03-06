@@ -79,6 +79,7 @@ function po_scripts_and_styles() {
         wp_enqueue_script( 'po-jquery' );
         wp_enqueue_script( 'po-waypoints' );
         wp_enqueue_script( 'po-transit' );
+        wp_enqueue_script( 'po-stepper' );
         wp_enqueue_script( 'po-js' );
 
         // main stylesheet
