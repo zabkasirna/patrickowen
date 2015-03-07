@@ -50,5 +50,12 @@ $(window).on('load', function() {
             _hpcCounter --;
         }
     });
+    $('.heirloom-product-item').each( function() { $(this).zoom({
+        on: 'click'
+    }); });
+    $('.hpc-zoom').on( 'click', function() {
+        console.log( $('.heirloom-product-item').eq( _hpcCounter ) );
+        $('.heirloom-product-item').eq( _hpcCounter - 1 ).trigger( 'click' );
+    });
 
 });
