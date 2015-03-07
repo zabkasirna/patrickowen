@@ -33,6 +33,7 @@ $old: false;
 @import "object/global/text";
 
 /* ------ {{ vendors }} ------ */
+@import "vendor/fontawesome/font-awesome";
 @import "vendor/unyson/fw";
 @import "vendor/unyson/frontend-grid";
 @import "vendor/unyson/extension";
@@ -157,7 +158,7 @@ $old: false;
     position: absolute;
     bottom: 0; left: x(-0.5);
 
-    width: x(3);
+    width: x(4.5);
     height: x(1);
 
     a.hpc-prev,
@@ -166,7 +167,7 @@ $old: false;
         display: block;
         float: left;
 
-        width: 50%;
+        width: x(1.5);
         height: 100%;
 
         font-size: x(.5);
@@ -180,6 +181,41 @@ $old: false;
         padding: 0 4px;
 
         text-align: center;
+
+        &:hover {
+            background-color: #AAA;
+        }
+    }
+
+    a.hpc-zoom {
+
+        display: block;
+        float: right;
+
+        width: x(1);
+        height: x(1);
+
+        font-size: x(.5);
+        line-height: x(1);
+
+        color: $black;
+        background-color: $white;
+
+        text-decoration: none;
+        margin: 0;
+
+        text-align: center;
+
+        background-color: $white;
+
+        i.fa {
+            @include transform( rotate( 180deg ) );
+            position: relative;
+            display: block;
+            width: x(1);
+            height: x(1);
+            top: -6px;
+        }
 
         &:hover {
             background-color: #AAA;

@@ -63,6 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="heirloom-product-control">
             <a href="#" class="hpc-prev">←</a>
             <a href="#" class="hpc-next">→</a>
+            <a href="#" class="hpc-zoom"><i class="fa fa-search-plus"></i></a>
         </div>
     <?php endif; ?>
 
