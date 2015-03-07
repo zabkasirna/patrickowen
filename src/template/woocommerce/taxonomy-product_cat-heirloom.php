@@ -13,10 +13,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-// $terms = get_the_terms( $post->ID, 'product_cat' );
-
-// print '<pre>';
-// print_r($terms);
-// print '</pre>';
-
-wc_get_template( 'archive-product.php' );
+wc_get_template( 'archive-product-heirloom.php' );
