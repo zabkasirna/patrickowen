@@ -13,10 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-// $terms = get_the_terms( $post->ID, 'product_cat' );
+$terms = get_the_terms( $post->ID, 'product_cat' );
 
-// print '<pre>';
-// print_r($terms);
-// print '</pre>';
+printrr( $terms );
 
 wc_get_template( 'archive-product.php' );

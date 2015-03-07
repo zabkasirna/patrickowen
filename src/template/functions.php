@@ -4,6 +4,10 @@
  * @since 0.0.0
  */
 
+// Load Sirna debugger
+// @todo make this automatically detect dev env
+require_once( 'printrr.php' );
+
 // Load theme's core
 require_once( 'sirna-po15.php' );
 
