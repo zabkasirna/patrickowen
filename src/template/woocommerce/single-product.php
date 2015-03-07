@@ -28,14 +28,7 @@ get_header( 'shop' ); ?>
         <?php while ( have_posts() ) : the_post(); ?>
 
             <?php
-                global $post;
-                $terms = get_the_terms( $post->ID, 'product_cat' );
-                foreach ($terms as $term) {
-                    $product_cat_slug = $term->slug;
-                    break;
-                }
-
-                if ( $product_cat_slug == 'heirloom' ) {
+                if ( powc_cat_is( 'heirloom' ) ) {
 
                     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40, 0);
 
@@ -44,7 +37,6 @@ get_header( 'shop' ); ?>
                 else {
                     wc_get_template_part( 'content', 'single-product' );
                 }
-
             ?>
 
         <?php endwhile; // end of the loop. ?>
