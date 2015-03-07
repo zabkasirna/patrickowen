@@ -7,6 +7,10 @@
  * @since 0.0.0
  */
 
+// Load Sirna debugger
+// @todo make this automatically detect dev env
+require_once( 'printrr.php' );
+
 /**
  * HEAD CLEANUP
  */
@@ -204,6 +208,31 @@ function powc_cat_is( $cat ) {
     }
     else {
         return 0;
+    }
+}
+
+function powc_template_loop_product_thumbnail() {
+    echo powc_get_product_thumbnail();
+}
+
+function powc_get_product_thumbnail() {
+    global $post, $product;
+
+    if ( has_post_thumbnail() ) {
+
+        $attachment_ids = $product->get_gallery_attachment_ids();
+        $markup = '';
+
+        foreach( $attachment_ids as $attachment_id ) {
+            $img_url = wp_get_attachment_url( $attachment_id );
+            $markup .= '<span><img src="' . $img_url . '" alt="' . $post->post_title . '"></span>';
+        }
+
+        return $markup;
+    }
+
+    elseif ( wc_placeholder_img_src() ) {
+        return wc_placeholder_img( 'shop_catalog' );
     }
 }
 
