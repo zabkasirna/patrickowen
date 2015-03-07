@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d54b3327e2f6466bf68ab5368c00a1a1",
+    "hash": "224d19e9cdc989238a895704c4fa16e1",
     "packages": [
         {
             "name": "composer/installers",
@@ -256,6 +256,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/revision-control/"
+        },
+        {
+            "name": "wpackagist-plugin/soliloquy-lite",
+            "version": "2.2.2",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/soliloquy-lite/",
+                "reference": "tags/2.2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/soliloquy-lite.2.2.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/soliloquy-lite/"
         },
         {
             "name": "wpackagist-plugin/visual-form-builder",
