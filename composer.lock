@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c1c5fd687095cc2eccb140e21c4a0a99",
+    "hash": "c8480ee4179a36eade943ad58f0e2120",
     "packages": [
         {
             "name": "composer/installers",
@@ -356,26 +356,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/woocommerce-product-details-customiser/"
-        },
-        {
-            "name": "wpackagist-plugin/woocommerce-product-image-flipper",
-            "version": "0.2.0",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/woocommerce-product-image-flipper/",
-                "reference": "tags/0.2.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/woocommerce-product-image-flipper.0.2.0.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/woocommerce-product-image-flipper/"
         },
         {
             "name": "wpackagist-plugin/woocommerce-product-sku-generator",
