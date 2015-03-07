@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "hash": "224d19e9cdc989238a895704c4fa16e1",
+    "hash": "c1c5fd687095cc2eccb140e21c4a0a99",
     "packages": [
         {
             "name": "composer/installers",
@@ -198,26 +199,6 @@
             "homepage": "https://wordpress.org/plugins/admin-toolbar-menus/"
         },
         {
-            "name": "wpackagist-plugin/newsletter",
-            "version": "3.6.7",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/newsletter/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/newsletter.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/newsletter/"
-        },
-        {
             "name": "wpackagist-plugin/regenerate-thumbnails",
             "version": "2.2.4",
             "source": {
@@ -258,6 +239,7 @@
             "homepage": "https://wordpress.org/plugins/revision-control/"
         },
         {
+<<<<<<< HEAD
             "name": "wpackagist-plugin/soliloquy-lite",
             "version": "2.2.2",
             "source": {
@@ -298,6 +280,8 @@
             "homepage": "https://wordpress.org/plugins/visual-form-builder/"
         },
         {
+=======
+>>>>>>> 62004c46893f1cfa7760822542b28d63cd16bc01
             "name": "wpackagist-plugin/woocommerce",
             "version": "2.3.5",
             "source": {
@@ -476,26 +460,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wysija-newsletters/"
-        },
-        {
-            "name": "wpackagist-plugin/yith-woocommerce-zoom-magnifier",
-            "version": "1.1.5",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/yith-woocommerce-zoom-magnifier/",
-                "reference": "tags/1.1.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/yith-woocommerce-zoom-magnifier.1.1.5.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/yith-woocommerce-zoom-magnifier/"
         }
     ],
     "packages-dev": [
@@ -549,7 +513,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/hide-admin-bar.0.2.6.zip",
+                "url": "http://downloads.wordpress.org/plugin/hide-admin-bar.0.2.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -558,26 +522,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/hide-admin-bar/"
-        },
-        {
-            "name": "wpackagist-plugin/menubar",
-            "version": "5.2",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/menubar/",
-                "reference": "tags/5.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/menubar.5.2.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/menubar/"
         },
         {
             "name": "wpackagist-plugin/query-monitor",
@@ -669,7 +613,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-optimize.1.8.9.7.zip",
+                "url": "http://downloads.wordpress.org/plugin/wp-optimize.1.8.9.7.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -684,7 +628,6 @@
     "minimum-stability": "stable",
     "stability-flags": [],
     "prefer-stable": false,
-    "prefer-lowest": false,
     "platform": {
         "php": ">=5.3.0"
     },

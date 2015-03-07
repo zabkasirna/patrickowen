@@ -33,6 +33,7 @@ $old: false;
 @import "object/global/text";
 
 /* ------ {{ vendors }} ------ */
+@import "vendor/fontawesome/font-awesome";
 @import "vendor/unyson/fw";
 @import "vendor/unyson/frontend-grid";
 @import "vendor/unyson/extension";
@@ -56,27 +57,11 @@ $old: false;
 
 /* ------ {{ shame }} ------ */
 .woocommerce div.product form.cart {
+
+    @include s-clearfix;
+    position: relative;
+
     label, input, p, a, li { font-family: $ff-sans-alt; }
-
-    div.quantity {
-        @include s-clearfix();
-        height: x(1);
-        width: 100%;
-        position: relative;
-        float: none;
-        margin: 0 0 x(.5) 0;
-
-        label {
-            float: left;
-            width: x(3);
-            margin-right: x(.5);
-
-            & + div {
-                float: none;
-                clear: right;
-            }
-        }
-    }
 }
 
 .fieldrow {
@@ -89,10 +74,151 @@ $old: false;
         display: block;
         float: left;
         width: x(3);
+        margin: 0 6px 0 0;
+        text-transform: uppercase;
+    }
+}
 
-        & + * {
-            clear: right;
-            float: none;
+.woocommerce-main-image {
+    display: block;
+    height: 100%;
+}
+
+.woocommerce {
+    .product_title {
+        text-transform: uppercase;
+        margin-bottom: x(.5);
+        max-width: x(15);
+    }
+}
+
+.product-buttons {
+    position: fixed;
+    bottom: x(.5);
+    margin-top: x(2);
+    width: x(18);
+
+    button {
+        width: 100%;
+
+        &:last-child { margin-bottom: 0 !important; }
+    }
+}
+
+.heirloom-product-outer {
+    @include s-clearfix();
+    position: relative;
+    max-height: 100%;
+    min-height: 100%;
+    min-width: x(20);
+    max-width: x(20);
+    width: x(20);
+    height: 100%;
+    overflow: hidden;
+    float: left;
+}
+.heirloom-product {
+    @include s-clearfix();
+
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: block;
+    float: left;
+
+    padding: 0;
+    margin: 0;
+    list-style: none outside none;
+
+    .heirloom-product-item {
+        @include s-clearfix();
+        position: relative;
+        top: 0;
+        right: 0;
+
+        min-height: 100%;
+        max-height: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .heirloom-product-image {
+        display: block;
+        max-height: 100%;
+        height: 100%;
+        float: left;
+    }
+}
+.heirloom-product-control {
+    @include s-clearfix();
+    @include transform-origin( top, left, 0 );
+    @include transform( rotate( -90deg ) );
+
+    display: block;
+    position: absolute;
+    bottom: 0; left: x(-0.5);
+
+    width: x(4.5);
+    height: x(1);
+
+    a.hpc-prev,
+    a.hpc-next {
+
+        display: block;
+        float: left;
+
+        width: x(1.5);
+        height: 100%;
+
+        font-size: x(.5);
+        line-height: x(1);
+
+        color: $black;
+        background-color: $white;
+
+        text-decoration: none;
+        margin: 0;
+        padding: 0 4px;
+
+        text-align: center;
+
+        &:hover {
+            background-color: #AAA;
+        }
+    }
+
+    a.hpc-zoom {
+
+        display: block;
+        float: right;
+
+        width: x(1);
+        height: x(1);
+
+        font-size: x(.5);
+        line-height: x(1);
+
+        color: $black;
+        background-color: $white;
+
+        text-decoration: none;
+        margin: 0;
+
+        text-align: center;
+
+        background-color: $white;
+
+        i.fa {
+            @include transform( rotate( 180deg ) );
+            position: relative;
+            display: block;
+            width: x(1);
+            height: x(1);
+            top: -6px;
+        }
+
+        &:hover {
+            background-color: #AAA;
         }
     }
 }

@@ -13,6 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $template = get_option( 'template' );
 
+global $post;
+
 switch( $template ) {
 	case 'twentyeleven' :
 		echo '<div id="primary"><div id="content" role="main" class="twentyeleven">';
@@ -30,6 +32,6 @@ switch( $template ) {
 		echo '<div id="primary" role="main" class="content-area twentyfifteen"><div id="main" class="site-main t15wc">';
 		break;
 	default :
-		echo '<div id="container"><div id="content" role="main">';
+		echo '<div id="content"><div id="inner-content"><main id="main" role="main">';
 		break;
 }

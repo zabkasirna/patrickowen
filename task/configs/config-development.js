@@ -23,7 +23,7 @@ module.exports = {
     },
 
     image: {
-        src: src + '/image/**/*.{png,jpg,svg}',
+        src: src + '/image/**/*.{png,jpg,svg,gif}',
         dest: dest + '/uploads/images'
     },
 
@@ -81,7 +81,7 @@ module.exports = {
     },
 
     font: {
-        src: src + '/style/font/**/*.{ttf,woff,eot,svg}',
+        src: src + '/style/font/**/*.{ttf,woff,eot,svg,woff2}',
         dest: dest + '/font'
     }
 };
