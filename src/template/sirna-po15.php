@@ -175,4 +175,36 @@ function powc_dequeue_styles( $enqueue_styles ) {
     return $enqueue_styles;
 }
 
+function powc_get_product_cat() {
+    global $post;
+
+    $the_product_cat = new stdClass();
+    $terms = get_the_terms( $post->ID, 'product_cat' );
+
+    if ( $terms ) {
+        foreach ($terms as $term) {
+            $the_product_cat->slug = $term->slug;
+
+            if ( $term->parent )  {
+                $the_product_cat->parent = $terms[ $term->parent ]->slug;
+            }
+
+            break;
+        }
+    }
+
+    return $the_product_cat;
+}
+
+function powc_cat_is( $cat ) {
+    $test_product = powc_get_product_cat();
+
+    if ( $test_product->slug == $cat || $test_product->parent == $cat ) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
 ?>

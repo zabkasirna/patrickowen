@@ -72,5 +72,4 @@ function get_current_template( $echo = false ) {
     else
         return $GLOBALS['current_theme_template'];
 }
-
 ?>
