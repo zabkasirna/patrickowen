@@ -31,6 +31,7 @@ $old: false;
 /* ------ {{ global object }} ------ */
 @import "object/global/element";
 @import "object/global/text";
+@import "object/global/scrollbar";
 
 /* ------ {{ vendors }} ------ */
 @import "vendor/fontawesome/font-awesome";
@@ -221,11 +222,11 @@ body.archive {
         @include s-clearfix();
 
         position: relative;
-        max-height: x(19);
-        height: x(19);
+        max-height: x(18);
+        height: x(18);
+        /* padding-bottom: x(1); */
         width: 100%;
         overflow: scroll;
-        padding-bottom: x(1);
     }
 
     ul.products {
