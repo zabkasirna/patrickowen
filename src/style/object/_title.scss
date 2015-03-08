@@ -1,3 +1,13 @@
+body.page,
+.woocommerce-page.archive {
+    .page-title {
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        // max-width: x(15);
+    }
+}
+
 .headline {
     display: block;
     text-decoration: none;

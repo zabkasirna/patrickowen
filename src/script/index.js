@@ -58,4 +58,8 @@ $(window).on('load', function() {
         $('.heirloom-product-item').eq( _hpcCounter - 1 ).trigger( 'click' );
     });
 
+    // Product Archive
+    // -- Heirloom
+    Product.init.archive.heirloom();
+
 });

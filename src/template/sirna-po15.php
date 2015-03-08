@@ -223,9 +223,13 @@ function powc_get_product_thumbnail() {
         $attachment_ids = $product->get_gallery_attachment_ids();
         $markup = '';
 
+        $counter = 0;
         foreach( $attachment_ids as $attachment_id ) {
-            $img_url = wp_get_attachment_url( $attachment_id );
-            $markup .= '<span><img src="' . $img_url . '" alt="' . $post->post_title . '"></span>';
+            if ( $counter < 2 ) {
+                $img_url = wp_get_attachment_url( $attachment_id );
+                $markup .= '<span class="product-heirloom-image-outer"><img class="product-heirloom-image" src="' . $img_url . '" alt="' . $post->post_title . '"></span>';
+                $counter++;
+            } else { break; }
         }
 
         return $markup;

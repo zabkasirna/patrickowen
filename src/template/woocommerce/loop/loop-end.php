@@ -7,4 +7,9 @@
  * @version     2.0.0
  */
 ?>
-</ul>
+<?php if ( powc_cat_is('heirloom') ) :?>
+    </div>
+        </ul>
+<?php else: ?>
+    </ul >
+<?php endif; ?>

@@ -5,6 +5,9 @@ var Product = {
         },
         variant: {
             selecter: initVariantSelecter
+        },
+        archive: {
+            heirloom: initHeirloomArchive
         }
     }
 };
@@ -31,6 +34,18 @@ function initVariantSelecter() {
     $variant.each( function( i ) {
         $(this).selecter();
     });
+}
+
+function initHeirloomArchive() {
+
+    if ( !$('.products-heirloom-outer').length ) return;
+
+    var $parent  = $('.products-heirloom-outer .products')
+    ,   $product = $parent.find('.product')
+    ,   _parentW = $product.length * $product.width() + 'px';
+
+    $parent.css( 'width', _parentW );
+
 }
 
 module.exports = Product;

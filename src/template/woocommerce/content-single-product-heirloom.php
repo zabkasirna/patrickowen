@@ -33,7 +33,7 @@ global $post, $product;
         <div class="heirloom-product-outer">
             <ul class="heirloom-product">
 
-            <?php $attachment_ids = array_reverse($product->get_gallery_attachment_ids()); ?>
+            <?php $attachment_ids = $product->get_gallery_attachment_ids(); ?>
 
             <?php foreach( $attachment_ids as $attachment_id ): $attachment_link = wp_get_attachment_url( $attachment_id );?>
                 <li class="heirloom-product-item">
