@@ -1,10 +1,12 @@
 body.page,
 .woocommerce-page.archive {
     .page-title {
+        position: relative;
         text-align: center;
         text-transform: uppercase;
         width: 100%;
-        // max-width: x(15);
+
+        @media ( min-width: 900px ) { left: x(-2); }
     }
 }
 
