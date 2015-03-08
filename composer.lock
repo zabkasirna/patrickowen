@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c8480ee4179a36eade943ad58f0e2120",
+    "hash": "dd8bf245583ea11bbd571c48044a938e",
     "packages": [
         {
             "name": "composer/installers",
@@ -258,26 +258,6 @@
             "homepage": "https://wordpress.org/plugins/woocommerce/"
         },
         {
-            "name": "wpackagist-plugin/woocommerce-attributes-menu-manager",
-            "version": "0.2",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/woocommerce-attributes-menu-manager/",
-                "reference": "tags/0.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/woocommerce-attributes-menu-manager.0.2.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/woocommerce-attributes-menu-manager/"
-        },
-        {
             "name": "wpackagist-plugin/woocommerce-cart-tab",
             "version": "0.3.1",
             "source": {
@@ -509,7 +489,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/unyson.2.1.25.zip",
+                "url": "https://downloads.wordpress.org/plugin/unyson.2.1.25.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -538,6 +518,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wordpress-database-reset/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-clean-up-optimizer",
+            "version": "2.0.24",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wp-clean-up-optimizer/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-clean-up-optimizer.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-clean-up-optimizer/"
         },
         {
             "name": "wpackagist-plugin/wp-optimize",
