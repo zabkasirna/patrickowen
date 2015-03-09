@@ -26,6 +26,17 @@ get_header( 'shop' ); ?>
 			<h1 class="h2 page-title"><?php woocommerce_page_title(); ?></h1>
 
 		<?php endif; ?>
+			<div class="heirloom-filters">
+				<div class="heirloom-filter">
+					<ul>
+						<li><a href="#" class="cat-filter">Bags</a></li>
+						<li><a href="#" class="cat-filter">Blazers</a></li>
+						<li><a href="#" class="cat-filter">Dresses</a></li>
+						<li><a href="#" class="cat-filter">Jewerly</a></li>
+						<li><a href="#" class="cat-filter">Pants</a></li>
+					</ul>
+				</div>
+			</div>
 
 		<?php do_action( 'woocommerce_archive_description' ); ?>
 
