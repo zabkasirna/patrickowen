@@ -22,19 +22,20 @@ class acf_field_sirna_hotspot extends acf_field {
         $this->label = __('Sirna Hotspot');
         $this->category = __("Content",'acf'); // Basic, Content, Choice, etc
         $this->defaults = array(
-            'preview_size' => 'full'
+            'save_format'   =>  'url',
+            'preview_size' => 'full',
+            'library'       =>  'all'
         );
         
         
         // do not delete!
         parent::__construct();
         
-        
         // settings
         $this->settings = array(
             'path' => apply_filters('acf/helpers/get_path', __FILE__),
             'dir' => apply_filters('acf/helpers/get_dir', __FILE__),
-            'version' => '1.0.0'
+            'version' => '0.0.1'
         );
 
     }
@@ -120,17 +121,17 @@ class acf_field_sirna_hotspot extends acf_field {
     function input_admin_enqueue_scripts()
     {
         // register ACF scripts
-        wp_register_script( 'acf-input-sirna_hotspot', $this->settings['dir'] . 'js/input.js', array('acf-input'), $this->settings['version'] );
-        wp_register_style( 'acf-input-sirna_hotspot', $this->settings['dir'] . 'css/input.css', array('acf-input'), $this->settings['version'] ); 
+        wp_register_script( 'acf-input-sirna_hotspot', $this->settings['dir'] . 'script/input.js', array('acf-input'), $this->settings['version'] );
+        wp_register_style( 'acf-input-sirna_hotspot', $this->settings['dir'] . 'style/input.css', array('acf-input'), $this->settings['version'] ); 
 
         // scripts
         wp_enqueue_script(array(
-            'acf-input-sirna_hotspot',  
+            'acf-input-sirna_hotspot'
         ));
 
         // styles
         wp_enqueue_style(array(
-            'acf-input-sirna_hotspot',  
+            'acf-input-sirna_hotspot'
         ));
     }
     

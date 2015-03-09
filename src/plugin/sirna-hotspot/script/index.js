@@ -1,11 +1,6 @@
-(function($){
-    
-    
-    function initialize_field( $el ) {
+var Test = require('./test');
 
-        console.log( $el );
-    }
-    
+(function($){
     
     /*
     *  acf/setup_fields (ACF4)
@@ -26,7 +21,7 @@
         
         $(postbox).find('.field[data-field_type="sirna_hotspot"]').each(function(){
 
-            initialize_field( $(this) );
+            Test.init( $(this) );
         });
     });
 

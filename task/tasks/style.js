@@ -54,6 +54,23 @@ gulp.task('style:old', function() {
     ;
 });
 
+gulp.task('style:sirnaHotspot', function() {
+
+    var file = 'input';
+
+    return gulp.src( config.styleSirnaHotspot.src + file + '.scss' )
+        .pipe(sourcemaps.init())
+        .pipe(autoprefixer({
+            browsers: 'last 2 versions',
+        }))
+        .pipe( sass() )
+        .pipe(sourcemaps.write('./maps'))
+        .on( 'error', errors )
+        .pipe(gulp.dest( config.styleSirnaHotspot.dest ))
+        .pipe( size( { title: config.styleSirnaHotspot.dest + file + '.css' } ) )
+    ;
+});
+
 gulp.task( 'style', function( done ) {
     sequence(
         [ 'style:modern' ],

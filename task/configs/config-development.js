@@ -67,16 +67,29 @@ module.exports = {
 
         // A separate bundle will be generated for each
         // bundle config in the list below
-        bundleConfigs: [{
-            entries: src + '/script/index.js',
-            dest: dest + '/script',
-            outputName: 'main.js'
-        }]
+        bundleConfigs: [
+            {
+                entries: src + '/script/index.js',
+                dest: dest + '/script',
+                outputName: 'main.js'
+            },
+            {
+                entries: src + '/plugin/sirna-hotspot/script/index.js',
+                dest: dest_plugin + '/sirna-hotspot/script/',
+                outputName: 'input.js'
+            }
+        ]
     },
 
     style: {
         src: src + '/style/',
         dest: dest + '/',
+        font: 'fonts/**/*.{ttf,woff,eot,svg}'
+    },
+
+    styleSirnaHotspot: {
+        src: src + '/plugin/sirna-hotspot/style/',
+        dest: dest_plugin + '/sirna-hotspot/style/',
         font: 'fonts/**/*.{ttf,woff,eot,svg}'
     },
 
