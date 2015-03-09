@@ -13,9 +13,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-if ( powc_cat_is( 'heirloom' ) ) {
-    wc_get_template( 'archive-product-heirloom.php' );
-}
-else {
-    wc_get_template( 'archive-product.php' );
-}
+wc_get_template( 'archive-product-heirloom.php' );

@@ -7,10 +7,10 @@
 
     @media ( min-width: 839px ) { padding: x(.5) x(1) x(.5) x(5); }
 
-    body.page & {
-        padding: x(4) x(1) 0 x(7);
+    body.page &,
+    .woocommerce-page.archive & {
+        padding: x(4) x(1) x(1) x(7);
     }
-
 }
 
 #page, #content, #inner-content, #main, #main>div {

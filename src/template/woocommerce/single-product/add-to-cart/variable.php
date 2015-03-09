@@ -84,13 +84,7 @@ global $product, $post;
         <div class="product-buttons">
             <button type="submit" class="single_add_to_cart_button button alt"><?php echo $product->single_add_to_cart_text(); ?></button>
             <?php
-                $terms = get_the_terms( $post->ID, 'product_cat' );
-                foreach ($terms as $term) {
-                    $product_cat_slug = $term->slug;
-                    break;
-                }
-            
-                if ( $product_cat_slug == 'heirloom' ) {
+                if ( powc_cat_is( 'heirloom' ) ) {
                     echo '<button class="button">Continue Shopping</button>';
                 }
             ?>

@@ -9,6 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 
+global $post, $product;
+
 ?>
 
 <?php
@@ -26,31 +28,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="heirloom" <?php post_class(); ?>>
-    <?php
-
-        global $post, $product;
-        $terms = get_the_terms( $post->ID, 'product_cat' );
-        foreach ($terms as $term) {
-            $product_cat_slug = $term->slug;
-            break;
-        }
-    ?>
     
-    <?php if ( $product_cat_slug != 'heirloom' ):  ?>
-        <?php
-            /**
-             * woocommerce_before_single_product_summary hook
-             *
-             * @hooked woocommerce_show_product_sale_flash - 10
-             * @hooked woocommerce_show_product_images - 20
-             */
-            do_action( 'woocommerce_before_single_product_summary' );
-        ?>
-    <?php else: ?>            
+    <?php if ( powc_cat_is( 'heirloom' ) ):  ?>
         <div class="heirloom-product-outer">
             <ul class="heirloom-product">
 
-            <?php $attachment_ids = array_reverse($product->get_gallery_attachment_ids()); ?>
+            <?php $attachment_ids = $product->get_gallery_attachment_ids(); ?>
 
             <?php foreach( $attachment_ids as $attachment_id ): $attachment_link = wp_get_attachment_url( $attachment_id );?>
                 <li class="heirloom-product-item">
@@ -65,6 +48,16 @@ if ( ! defined( 'ABSPATH' ) ) {
             <a href="#" class="hpc-next">→</a>
             <a href="#" class="hpc-zoom"><i class="fa fa-search-plus"></i></a>
         </div>
+    <?php else: ?>            
+        <?php
+            /**
+             * woocommerce_before_single_product_summary hook
+             *
+             * @hooked woocommerce_show_product_sale_flash - 10
+             * @hooked woocommerce_show_product_images - 20
+             */
+            do_action( 'woocommerce_before_single_product_summary' );
+        ?>
     <?php endif; ?>
 
     <div class="summary entry-summary">

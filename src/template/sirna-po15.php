@@ -7,6 +7,10 @@
  * @since 0.0.0
  */
 
+// Load Sirna debugger
+// @todo make this automatically detect dev env
+require_once( 'printrr.php' );
+
 /**
  * HEAD CLEANUP
  */
@@ -173,6 +177,67 @@ function powc_dequeue_styles( $enqueue_styles ) {
     unset( $enqueue_styles[ 'woocommerce-smallscreen' ] );
 
     return $enqueue_styles;
+}
+
+function powc_get_product_cat() {
+    global $post;
+
+    $the_product_cat = new stdClass();
+    $terms = get_the_terms( $post->ID, 'product_cat' );
+
+    if ( $terms ) {
+        foreach ($terms as $term) {
+            $the_product_cat->slug = $term->slug;
+
+            if ( $term->parent )  {
+                $the_product_cat->parent = $terms[ $term->parent ]->slug;
+            }
+
+            break;
+        }
+    }
+
+    return $the_product_cat;
+}
+
+function powc_cat_is( $cat ) {
+    $test_product = powc_get_product_cat();
+
+    if ( $test_product->slug == $cat || $test_product->parent == $cat ) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
+function powc_template_loop_product_thumbnail() {
+    echo powc_get_product_thumbnail();
+}
+
+function powc_get_product_thumbnail() {
+    global $post, $product;
+
+    if ( has_post_thumbnail() ) {
+
+        $attachment_ids = $product->get_gallery_attachment_ids();
+        $markup = '';
+
+        $counter = 0;
+        foreach( $attachment_ids as $attachment_id ) {
+            if ( $counter < 2 ) {
+                $img_url = wp_get_attachment_url( $attachment_id );
+                $markup .= '<span class="product-heirloom-image-outer"><img class="product-heirloom-image" src="' . $img_url . '" alt="' . $post->post_title . '"></span>';
+                $counter++;
+            } else { break; }
+        }
+
+        return $markup;
+    }
+
+    elseif ( wc_placeholder_img_src() ) {
+        return wc_placeholder_img( 'shop_catalog' );
+    }
 }
 
 ?>
