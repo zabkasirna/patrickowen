@@ -77,8 +77,6 @@ function initFeatureImage() {
         var $el = $('.heirloom-product-item').eq( _hpcCounter - 1 )
         ,   $icon = $(this).find('.fa');
 
-        console.log( $icon );
-
         if ( !_isHpZoom ) {
             $el.zoom({
                 onZoomIn: function() { _isHpZoom = true; }

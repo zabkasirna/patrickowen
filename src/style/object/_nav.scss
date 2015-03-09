@@ -1,8 +1,17 @@
+.menu-main-navigation-container {
+    max-width: x(8);
+    width: x(8);
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
 #nav-main {
     // Reset first
     margin: 0;
     padding: 0;
     list-style: none outside none;
+
+    width: 100%;
 
     @media ( min-width: 768px ) {
         margin-top: x(1);
@@ -23,7 +32,7 @@
         letter-spacing: 0.1em;
 
         display: block;
-        width: x(10);
+        width: 100%;
 
         a {
             display: block;
