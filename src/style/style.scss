@@ -215,6 +215,10 @@ $old: false;
             background-color: #AAA;
         }
     }
+
+    .touch & a.hpc-zoom {
+        display: none;
+    }
 }
 
 body.archive {
@@ -228,6 +232,8 @@ body.archive {
         /* padding-bottom: x(1); */
         width: 100%;
         overflow: scroll;
+
+        z-index: $z-product-archive;
     }
 
     ul.products {

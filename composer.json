@@ -48,7 +48,8 @@
         "wpackagist-plugin/woocommerce-product-sku-generator": "1.2.1",
         "wpackagist-plugin/wysija-newsletters": "2.6.15",
         "wpackagist-plugin/paypal-currency-converter-basic-for-woocommerce": "1.3",
-        "wpackagist-plugin/woocommerce-product-price-based-on-countries": "1.2.4"
+        "wpackagist-plugin/woocommerce-product-price-based-on-countries": "1.2.4",
+        "wpackagist-plugin/advanced-custom-fields": "4.4.0"
     },
     "config": {
         "bin-dir": "bin/",
