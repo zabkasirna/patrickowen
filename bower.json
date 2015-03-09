@@ -28,7 +28,8 @@
     "jquery.transit": "~0.9.12",
     "Stepper": "~3.0.8",
     "Selecter": "~3.2.4",
-    "jquery-zoom": "~1.7.13"
+    "jquery-zoom": "~1.7.13",
+    "jquery-hotspot": "git@github.com:Aniruddha22/jquery-hotspot.git"
   },
   "overrides": {
     "modernizr": {
@@ -36,6 +37,9 @@
     },
     "waypoints": {
       "main": "lib/jquery.waypoints.js"
+    },
+    "jquery-hotspot": {
+      "main": ["jquery.hotspot.js", "jquery.hotspot.css"]
     }
   },
   "devDependencies": {

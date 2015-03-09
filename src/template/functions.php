@@ -55,6 +55,12 @@ add_filter( 'nav_menu_css_class', 'toggle_nav_class', 10, 2 );
 
 add_action( 'after_setup_theme', 'powc_cleanup' );
 
+/**
+ * Hotspot
+ */
+
+add_action( 'admin_enqueue_scripts', 'po_admin_scripts_and_styles' );
+
 /** Debugger */
 add_filter( 'template_include', 'var_template_include', 1000 );
 function var_template_include( $t ){
