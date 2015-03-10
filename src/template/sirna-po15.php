@@ -109,14 +109,14 @@ function po_scripts_and_styles() {
 
 // Admin script queue
 function po_admin_scripts_and_styles() {
-    wp_register_script( 'po-jquery-hotspot', get_template_directory_uri() . '/script/vendor/jquery-hotspot/jquery.hotspot.js', array( 'jquery' ), '', true );
-    wp_register_script( 'po-admin-script', get_template_directory_uri() . '/script/po-admin.js', array( 'jquery', 'po-jquery-hotspot' ), '', true );
+    // wp_register_script( 'po-jquery-hotspot', get_template_directory_uri() . '/script/vendor/jquery-hotspot/jquery.hotspot.js', array( 'jquery' ), '', true );
+    // wp_register_script( 'po-admin-script', get_template_directory_uri() . '/script/po-admin.js', array( 'jquery', 'po-jquery-hotspot' ), '', true );
 
-    wp_enqueue_script( 'po-jquery-hotspot' );
-    wp_enqueue_script( 'po-admin-script' );
+    // wp_enqueue_script( 'po-jquery-hotspot' );
+    // wp_enqueue_script( 'po-admin-script' );
 
-    wp_register_style( 'po-jquery-hotspot-style', get_template_directory_uri() . '/script/vendor/jquery-hotspot/jquery.hotspot.css', array(), '', 'all' );
-    wp_enqueue_style( 'po-jquery-hotspot-style' );
+    // wp_register_style( 'po-jquery-hotspot-style', get_template_directory_uri() . '/script/vendor/jquery-hotspot/jquery.hotspot.css', array(), '', 'all' );
+    // wp_enqueue_style( 'po-jquery-hotspot-style' );
 }
 
 /**

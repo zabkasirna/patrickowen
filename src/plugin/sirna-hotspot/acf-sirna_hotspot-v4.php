@@ -3,30 +3,19 @@
 class acf_field_sirna_hotspot extends acf_field {
     
     // vars
-    var $settings, // will hold info such as dir / path
-        $defaults; // will hold default field options
-
-    /*
-    *  __construct
-    *
-    *  Set name / label needed for actions / filters
-    *
-    *  @since   0.0.1
-    *  @date    09/03/15
-    */
+    var $settings; // will hold info such as dir / path
     
     function __construct()
     {
         // vars
         $this->name = 'sirna_hotspot';
-        $this->label = __('Sirna Hotspot');
-        $this->category = __("Content",'acf'); // Basic, Content, Choice, etc
+        $this->label = 'Sirna Hotspot';
+        $this->category = 'Sirna'; // Basic, Content, Choice, etc
         $this->defaults = array(
-            'save_format'   =>  'url',
+            'save_format' =>  'object',
             'preview_size' => 'full',
-            'library'       =>  'all'
+            'library' =>  'all'
         );
-        
         
         // do not delete!
         parent::__construct();
@@ -38,22 +27,68 @@ class acf_field_sirna_hotspot extends acf_field {
             'version' => '0.0.1'
         );
 
+        // filters
+        add_filter('get_media_item_args', array($this, 'get_media_item_args'));
+        add_filter('wp_prepare_attachment_for_js', array($this, 'wp_prepare_attachment_for_js'), 10, 3);
+
+        // JSON
+        add_action('wp_ajax_acf/fields/image/get_images', array($this, 'ajax_get_images'), 10, 1);
+        add_action('wp_ajax_nopriv_acf/fields/image/get_images', array($this, 'ajax_get_images'), 10, 1);
+
+        // Hotspot
+        add_action('wp_ajax_test_response', array($this, 'ajax_test_request'), 10, 5);
     }
-    
-    
-    /*
-    *  create_options()
-    *
-    *  Create extra options for field. Rendered when editing a field.
-    *  The value of $field['name'] can be used (like below) to save extra data to the $field
-    *
-    *  @type    action
-    *  @since   0.0.1
-    *  @date    09/03/15
-    *
-    *  @param   $field  - an array holding all the field's data
-    */
-    
+
+    function create_field( $field )
+    {
+        // vars
+        $o = array(
+            'class'     =>  '',
+            'url'       =>  '',
+        );
+        
+        if( $field['value'] && is_numeric($field['value']) )
+        {
+            $url = wp_get_attachment_image_src($field['value'], $field['preview_size']);
+            $o['class'] = 'active';
+            $o['url'] = $url[0];
+        }
+
+        printrr( $field );
+        printrr( $_POST['acf'] )
+
+        ?>
+<div class="acf-image-uploader clearfix <?php echo $o['class']; ?>"
+    data-preview_size="<?php echo $field['preview_size']; ?>"
+    data-library="<?php echo $field['library']; ?>" >
+
+    <input class="acf-image-value"
+        type="hidden"
+        name="<?php echo $field['name']; ?>"
+        value="<?php echo $field['value']; ?>" />
+
+    <div class="has-image">
+        <div class="hover">
+            <ul class="bl">
+                <li><a class="acf-button-delete ir" href="#">Remove</a></li>
+                <li><a class="acf-button-edit ir" href="#">Edit</a></li>
+            </ul>
+        </div>
+
+        <div class="shs-image">
+            <img class="acf-image-image" src="<?php echo $o['url']; ?>" alt=""/>
+        </div>
+
+    </div>
+    <div class="no-image">
+        <p>No image selected <input type="button" class="button add-image" value="Add Image" />
+    </div>
+</div>
+        <?php
+
+    }
+
+
     function create_options( $field )
     {
         // defaults?
@@ -68,271 +103,264 @@ class acf_field_sirna_hotspot extends acf_field {
         // Create Field Options HTML
         ?>
 <tr class="field_option field_option_<?php echo $this->name; ?>">
+    <td class="label">
+        <label>Return Value</label>
+        <p>Specify the returned value on front end</p>
+    </td>
+    <td>
+        <?php
+        do_action('acf/create_field', array(
+            'type'      =>  'radio',
+            'name'      =>  'fields['.$key.'][save_format]',
+            'value'     =>  $field['save_format'],
+            'layout'    =>  'horizontal',
+            'choices'   => array(
+                'object'    =>  'Image Object',
+                'url'       =>  'Image URL',
+                'id'        =>  'Image ID'
+            )
+        ));
+        ?>
+    </td>
+</tr>
+<tr class="field_option field_option_<?php echo $this->name; ?>">
+    <td class="label">
+        <label>Preview Size</label>
+        <p>Shown when entering data</p>
+    </td>
+    <td>
+        <?php
+        
+        do_action('acf/create_field', array(
+            'type'      =>  'radio',
+            'name'      =>  'fields['.$key.'][preview_size]',
+            'value'     =>  $field['preview_size'],
+            'layout'    =>  'horizontal',
+            'choices'   =>  apply_filters('acf/get_image_sizes', array())
+        ));
 
+        ?>
+    </td>
+</tr>
+<tr class="field_option field_option_<?php echo $this->name; ?>">
+    <td class="label">
+        <label>Library</label>
+        <p>Limit the media library choice</p>
+    </td>
+    <td>
+        <?php
+        
+        do_action('acf/create_field', array(
+            'type'      =>  'radio',
+            'name'      =>  'fields['.$key.'][library]',
+            'value'     =>  $field['library'],
+            'layout'    =>  'horizontal',
+            'choices'   =>  array(
+                'all' => 'All',
+                'uploadedTo' => 'Uploaded to post'
+            )
+        ));
+
+        ?>
+    </td>
 </tr>
         <?php
-        
     }
-    
-    
-    /*
-    *  create_field()
-    *
-    *  Create the field HTML interface
-    *
-    *  @param   $field - an array holding all the field's data
-    *
-    *  @type    action
-    *  @since   0.0.1
-    *  @date    09/03/15
-    */
-    
-    function create_field( $field )
+
+
+    function update_field( $value, $post_id, $field ) {
+        printrr( $field );
+        die;
+
+        return $field;
+    }
+
+    function update_value( $value, $post_id, $field )
     {
-        // defaults?
-        /*
-        $field = array_merge($this->defaults, $field);
-        */
-        
-        // perhaps use $field['preview_size'] to alter the markup?
-        
-        
-        // create Field HTML
-        ?>
-        <div>
-            
-        </div>
-        <?php
+
+        if( is_array($value) && isset($value['id']) )
+        {
+            $value = $value['id'];
+        }
+
+        if( is_object($value) && isset($value->ID) )
+        {
+            $value = $value->ID;
+        }
+
+        return $value;
     }
-    
-    
-    /*
-    *  input_admin_enqueue_scripts()
-    *
-    *  This action is called in the admin_enqueue_scripts action on the edit screen where the field is created.
-    *  Use this action to add CSS + JavaScript to assist create_field() action.
-    *
-    *  $info    http://codex.wordpress.org/Plugin_API/Action_Reference/admin_enqueue_scripts
-    *  @type    action
-    *  @since   0.0.1
-    *  @date    09/03/15
-    */
+
+
+    function format_value_for_api( $value, $post_id, $field )
+    {
+        // validate
+        if( !$value ) { return false; }
+        
+        // format
+        if( $field['save_format'] == 'url' )
+        {
+            $value = wp_get_attachment_url( $value );
+        }
+        elseif( $field['save_format'] == 'object' )
+        {
+            $attachment = get_post( $value );
+            
+            // validate
+            if( !$attachment ) { return false; }
+            
+            // create array to hold value data
+            $src = wp_get_attachment_image_src( $attachment->ID, 'full' );
+            
+            $value = array(
+                'id' => $attachment->ID,
+                'alt' => get_post_meta($attachment->ID, '_wp_attachment_image_alt', true),
+                'title' => $attachment->post_title,
+                'mime_type' => $attachment->post_mime_type,
+                'url' => $src[0],
+                'width' => $src[1],
+                'height' => $src[2],
+                'new_val' => get_post($post_id)
+            );
+        }
+        
+        return $value;
+    }
+
+    function get_media_item_args( $vars )
+    {
+        $vars['send'] = true;
+        return($vars);
+    }
+
+
+    function ajax_get_images()
+    {
+        // vars
+        $options = array(
+            'nonce' => '',
+            'images' => array(),
+            'preview_size' => 'full'
+        );
+
+        $return = array();
+        
+        // load post options
+        $options = array_merge($options, $_POST);
+
+        // verify nonce
+        if( ! wp_verify_nonce($options['nonce'], 'acf_nonce') )
+        {
+            die(0);
+        }
+        
+        if( $options['images'] )
+        {
+            foreach( $options['images'] as $id )
+            {
+                $url = wp_get_attachment_image_src( $id, $options['preview_size'] );
+                
+                $return[] = array(
+                    'id' => $id,
+                    'url' => $url[0],
+                );
+            }
+        }
+        
+        // return json
+        echo json_encode( $return );
+        die;
+    }
+
+    function image_size_names_choose( $sizes )
+    {
+        global $_wp_additional_image_sizes;
+            
+        if( $_wp_additional_image_sizes )
+        {
+            foreach( $_wp_additional_image_sizes as $k => $v )
+            {
+                $title = $k;
+                $title = str_replace('-', ' ', $title);
+                $title = str_replace('_', ' ', $title);
+                $title = ucwords( $title );
+                
+                $sizes[ $k ] = $title;
+            }
+        }
+        
+        return $sizes;
+    }
+
+    function wp_prepare_attachment_for_js( $response, $attachment, $meta )
+    {
+        // only for image
+        if( $response['type'] != 'image' )
+        {
+            return $response;
+        }
+        
+        // make sure sizes exist. Perhaps they dont?
+        if( !isset($meta['sizes']) )
+        {
+            return $response;
+        }
+        
+        
+        $attachment_url = $response['url'];
+        $base_url = str_replace( wp_basename( $attachment_url ), '', $attachment_url );
+        
+        if( isset($meta['sizes']) && is_array($meta['sizes']) )
+        {
+            foreach( $meta['sizes'] as $k => $v )
+            {
+                if( !isset($response['sizes'][ $k ]) )
+                {
+                    $response['sizes'][ $k ] = array(
+                        'height'      =>  $v['height'],
+                        'width'       =>  $v['width'],
+                        'url'         => $base_url .  $v['file'],
+                        'orientation' => $v['height'] > $v['width'] ? 'portrait' : 'landscape',
+                    );
+                }
+            }
+        }
+
+        return $response;
+    }
 
     function input_admin_enqueue_scripts()
     {
         // register ACF scripts
-        wp_register_script( 'acf-input-sirna_hotspot', $this->settings['dir'] . 'script/input.js', array('acf-input'), $this->settings['version'] );
-        wp_register_style( 'acf-input-sirna_hotspot', $this->settings['dir'] . 'style/input.css', array('acf-input'), $this->settings['version'] ); 
+        wp_register_script( 'shs_script', $this->settings['dir'] . 'script/input.js', array('acf-input'), $this->settings['version'] );
+        wp_register_style( 'shs_style', $this->settings['dir'] . 'style/input.css', array('acf-input'), $this->settings['version'] ); 
 
-        // scripts
+        // load the script
         wp_enqueue_script(array(
-            'acf-input-sirna_hotspot'
+            'shs_script'
         ));
+
+        wp_localize_script(
+            'shs_script',
+            'the_ajax_script',
+            array(
+                'ajaxurl' => admin_url( 'admin-ajax.php' )
+            )
+        );
 
         // styles
         wp_enqueue_style(array(
-            'acf-input-sirna_hotspot'
+            'shs_style'
         ));
     }
-    
-    
-    /*
-    *  input_admin_head()
-    *
-    *  This action is called in the admin_head action on the edit screen where the field is created.
-    *  Use this action to add CSS and JavaScript to assist the create_field() action.
-    *
-    *  @info    http://codex.wordpress.org/Plugin_API/Action_Reference/admin_head
-    *  @type    action
-    *  @since   0.0.1
-    *  @date    09/03/15
-    */
 
-    function input_admin_head()
-    {
-        // Note: This function can be removed if not used
+    function ajax_test_request() {
+        if ( isset( $_POST['post_var'] ) ) {
+            $response = $_POST['post_var'];
+            echo $response;
+            die();
+        }
     }
-    
-    
-    /*
-    *  field_group_admin_enqueue_scripts()
-    *
-    *  This action is called in the admin_enqueue_scripts action on the edit screen where the field is edited.
-    *  Use this action to add CSS + JavaScript to assist the create_field_options() action.
-    *
-    *  $info    http://codex.wordpress.org/Plugin_API/Action_Reference/admin_enqueue_scripts
-    *  @type    action
-    *  @since   0.0.1
-    *  @date    09/03/15
-    */
-
-    function field_group_admin_enqueue_scripts()
-    {
-        // Note: This function can be removed if not used
-    }
-
-    
-    /*
-    *  field_group_admin_head()
-    *
-    *  This action is called in the admin_head action on the edit screen where the field is edited.
-    *  Use this action to add CSS and JavaScript to assist the create_field_options() action.
-    *
-    *  @info    http://codex.wordpress.org/Plugin_API/Action_Reference/admin_head
-    *  @type    action
-    *  @since   0.0.1
-    *  @date    09/03/15
-    */
-
-    function field_group_admin_head()
-    {
-        // Note: This function can be removed if not used
-    }
-
-
-    /*
-    *  load_value()
-    *
-        *  This filter is applied to the $value after it is loaded from the db
-    *
-    *  @type    filter
-    *  @since   0.0.1
-    *  @date    09/03/15
-    *
-    *  @param   $value - the value found in the database
-    *  @param   $post_id - the $post_id from which the value was loaded
-    *  @param   $field - the field array holding all the field options
-    *
-    *  @return  $value - the value to be saved in the database
-    */
-    
-    function load_value( $value, $post_id, $field )
-    {
-        return $value;
-    }
-    
-    
-    /*
-    *  update_value()
-    *
-    *  This filter is applied to the $value before it is updated in the db
-    *
-    *  @type    filter
-    *  @since   0.0.1
-    *  @date    09/03/15
-    *
-    *  @param   $value - the value which will be saved in the database
-    *  @param   $post_id - the $post_id of which the value will be saved
-    *  @param   $field - the field array holding all the field options
-    *
-    *  @return  $value - the modified value
-    */
-    
-    function update_value( $value, $post_id, $field )
-    {
-        return $value;
-    }
-    
-    
-    /*
-    *  format_value()
-    *
-    *  This filter is applied to the $value after it is loaded from the db and before it is passed to the create_field action
-    *
-    *  @type    filter
-    *  @since   0.0.1
-    *  @date    09/03/15
-    *
-    *  @param   $value  - the value which was loaded from the database
-    *  @param   $post_id - the $post_id from which the value was loaded
-    *  @param   $field  - the field array holding all the field options
-    *
-    *  @return  $value  - the modified value
-    */
-    
-    function format_value( $value, $post_id, $field )
-    {
-        // defaults?
-        /*
-        $field = array_merge($this->defaults, $field);
-        */
-        
-        // perhaps use $field['preview_size'] to alter the $value?
-        
-        return $value;
-    }
-    
-    
-    /*
-    *  format_value_for_api()
-    *
-    *  This filter is applied to the $value after it is loaded from the db and before it is passed back to the API functions such as the_field
-    *
-    *  @type    filter
-    *  @since   0.0.1
-    *  @date    09/03/15
-    *
-    *  @param   $value  - the value which was loaded from the database
-    *  @param   $post_id - the $post_id from which the value was loaded
-    *  @param   $field  - the field array holding all the field options
-    *
-    *  @return  $value  - the modified value
-    */
-    
-    function format_value_for_api( $value, $post_id, $field )
-    {
-        // defaults?
-        /*
-        $field = array_merge($this->defaults, $field);
-        */
-        
-        // perhaps use $field['preview_size'] to alter the $value?
-
-        return $value;
-    }
-    
-    
-    /*
-    *  load_field()
-    *
-    *  This filter is applied to the $field after it is loaded from the database
-    *
-    *  @type    filter
-    *  @since   0.0.1
-    *  @date    09/03/15
-    *
-    *  @param   $field - the field array holding all the field options
-    *
-    *  @return  $field - the field array holding all the field options
-    */
-    
-    function load_field( $field )
-    {
-        return $field;
-    }
-    
-    
-    /*
-    *  update_field()
-    *
-    *  This filter is applied to the $field before it is saved to the database
-    *
-    *  @type    filter
-    *  @since   0.0.1
-    *  @date    09/03/15
-    *
-    *  @param   $field - the field array holding all the field options
-    *  @param   $post_id - the field group ID (post_type = acf)
-    *
-    *  @return  $field - the modified field
-    */
-
-    function update_field( $field, $post_id )
-    {
-        return $field;
-    }
-
-    
 }
 
 

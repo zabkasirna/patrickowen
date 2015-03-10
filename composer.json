@@ -46,8 +46,7 @@
         "wpackagist-plugin/woocommerce-product-archive-customiser": "0.5.0",
         "wpackagist-plugin/woocommerce-product-details-customiser": "0.2.0",
         "wpackagist-plugin/woocommerce-product-sku-generator": "1.2.1",
-        "wpackagist-plugin/wysija-newsletters": "2.6.15",
-        "wpackagist-plugin/advanced-custom-fields": "4.4.0"
+        "wpackagist-plugin/wysija-newsletters": "2.6.15"
     },
     "config": {
         "bin-dir": "bin/",

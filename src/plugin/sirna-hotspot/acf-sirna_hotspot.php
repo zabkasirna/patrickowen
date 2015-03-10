@@ -12,10 +12,10 @@ License: proprietary
 
 load_plugin_textdomain( 'acf-sirna_hotspot', false, dirname( plugin_basename(__FILE__) ) . '/lang/' ); 
 
-// Include field type for ACF4
-function register_fields_sirna_hotspot() {
-    include_once('acf-sirna_hotspot-v4.php');
+// Currently only support v5
+function include_field_types_FIELD_NAME( $version ) {
+    include_once('acf-sirna_hotspot-v5.php');
 }
 
-add_action('acf/register_fields', 'register_fields_sirna_hotspot'); 
+add_action('acf/include_field_types', 'include_field_types_FIELD_NAME');
 ?>

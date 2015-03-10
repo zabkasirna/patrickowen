@@ -1,28 +1,26 @@
-var Test = require('./test');
-
 (function($){
-    
-    /*
-    *  acf/setup_fields (ACF4)
-    *
-    *  This event is triggered when ACF adds any new elements to the DOM. 
-    *
-    *  @type    function
-    *  @since   0.0.1
-    *  @date    09/03/15
-    *
-    *  @param   event       e: an event object. This can be ignored
-    *  @param   Element     postbox: An element which contains the new HTML
-    *
-    *  @return  n/a
-    */
-    
-    $(document).on('acf/setup_fields', function(e, postbox){
-        
-        $(postbox).find('.field[data-field_type="sirna_hotspot"]').each(function(){
 
-            Test.init( $(this) );
-        });
+    function init() {
+
+        var $imageOuter = $('.acf-row:not(".clone")').last().find('.shs-img-outer')
+        ,   $parentField = $imageOuter.closest('.field_type-sirna_hotspot')
+        ;
+
+        console.clear();
+        console.log( $imageOuter );
+        console.log( $parentField );
+
+    }
+
+    acf.add_action( 'ready append', function( $el ) {
+        
+        acf.get_fields({ type: 'sirna_hotspot' }, $el)
+            .each(
+                function() {
+                    
+                    init();
+                }
+            );
     });
 
 

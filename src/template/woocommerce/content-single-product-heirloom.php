@@ -14,6 +14,13 @@ global $post, $product;
 ?>
 
 <?php
+    $test = get_field('test');
+    echo '<pre>';
+    print_r ( $test );
+    echo '</pre>';
+?>
+
+<?php
     /**
      * woocommerce_before_single_product hook
      *
@@ -61,8 +68,8 @@ global $post, $product;
     <?php endif; ?>
 
     <div class="summary entry-summary">
-
         <?php
+
             /**
              * woocommerce_single_product_summary hook
              *
