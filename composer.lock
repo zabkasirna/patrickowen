@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a49b24e463e11297207e71df3537ca5f",
+    "hash": "cf84a0a37536e186ec7ca6a5a0016eb0",
     "packages": [
         {
             "name": "composer/installers",
@@ -198,16 +198,16 @@
             "homepage": "https://wordpress.org/plugins/admin-toolbar-menus/"
         },
         {
-            "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "4.4.0",
+            "name": "wpackagist-plugin/paypal-currency-converter-basic-for-woocommerce",
+            "version": "1.3",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/advanced-custom-fields/",
+                "url": "http://plugins.svn.wordpress.org/paypal-currency-converter-basic-for-woocommerce/",
                 "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.zip",
+                "url": "https://downloads.wordpress.org/plugin/paypal-currency-converter-basic-for-woocommerce.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -215,7 +215,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
+            "homepage": "https://wordpress.org/plugins/paypal-currency-converter-basic-for-woocommerce/"
         },
         {
             "name": "wpackagist-plugin/regenerate-thumbnails",
@@ -356,6 +356,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/woocommerce-product-details-customiser/"
+        },
+        {
+            "name": "wpackagist-plugin/woocommerce-product-price-based-on-countries",
+            "version": "1.2.4",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/woocommerce-product-price-based-on-countries/",
+                "reference": "tags/1.2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woocommerce-product-price-based-on-countries.1.2.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woocommerce-product-price-based-on-countries/"
         },
         {
             "name": "wpackagist-plugin/woocommerce-product-sku-generator",

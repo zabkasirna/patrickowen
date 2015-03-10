@@ -1,0 +1,37 @@
+.heirloom-filters {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 999999999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    ul {
+        position: relative;
+        display: block;
+        margin: 0;
+        padding: 0;
+        list-style: none outside none;
+    }
+    .heirloom-filter{
+        @media ( max-height: "100px" ) {
+            padding-top: x(1);
+        }
+        padding-top: x(7);
+        margin: 0 auto;
+        text-align: center;
+        a {
+            font-family: $ff-sans-bold;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .cat-filter {
+            font-size: 28px;
+            line-height: x(1.5);
+            margin-bottom: x(0.15);
+
+        }
+    }
+}
