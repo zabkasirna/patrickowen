@@ -14,9 +14,9 @@ global $post, $product;
 ?>
 
 <?php
-    $test = get_field('test');
+    $shs_main = get_field('shs_main');
     echo '<pre>';
-    print_r ( $test );
+    print_r ( $shs_main );
     echo '</pre>';
 ?>
 

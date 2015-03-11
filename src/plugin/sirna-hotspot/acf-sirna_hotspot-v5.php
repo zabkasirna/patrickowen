@@ -77,11 +77,11 @@ class acf_field_sirna_hotspot extends acf_field {
             <li><a class="acf-icon dark" data-name="remove-button" href="#"><i class="acf-sprite-delete"></i></a></li>
         </ul>
         <div class="shs-img-outer">
-            <img data-name="value-url" src="<?php echo $url; ?>" alt=""/>
+            <img class="shs-img" data-name="value-url" src="<?php echo $url; ?>" alt=""/>
         </div>
     </div>
     <div class="view hide-if-value">
-        <p><?php 'No image selected' ?> <a data-name="add-button" class="acf-button" href="#">Add Image</a></p>
+        <p><?php 'No image selected' ?> <a data-name="add-button" class="acf-button" href="#">Choose Image</a></p>
     </div>
 </div>
 <?php
