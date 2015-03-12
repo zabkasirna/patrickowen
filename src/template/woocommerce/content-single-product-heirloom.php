@@ -11,13 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $post, $product;
 
-?>
+// $shs_test = get_field('shs_main');
+// echo '<pre>';
+// print_r ( $shs_test );
+// echo '</pre>';
 
-<?php
-    $shs_main = get_field('shs_main');
-    echo '<pre>';
-    print_r ( $shs_main );
-    echo '</pre>';
 ?>
 
 <?php
@@ -37,15 +35,43 @@ global $post, $product;
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="heirloom" <?php post_class(); ?>>
     
     <?php if ( powc_cat_is( 'heirloom' ) ):  ?>
+
+        <?php
+            $shs_main = get_field('shs_main');
+            if ( isset( $shs_main ) ) : ?>
+
         <div class="heirloom-product-outer">
             <ul class="heirloom-product">
 
-            <?php $attachment_ids = $product->get_gallery_attachment_ids(); ?>
+            <?php foreach ($shs_main as $h_loop) : ?>
 
-            <?php foreach( $attachment_ids as $attachment_id ): $attachment_link = wp_get_attachment_url( $attachment_id );?>
                 <li class="heirloom-product-item">
-                    <img class="heirloom-product-image" src="<?php echo $attachment_link; ?>">
+                    <img class="heirloom-product-image" src="<?php echo $h_loop['h_image']['url']; ?>">
+                    <?php if( $h_loop['is_shs'] ): ?>
+
+                        <div class="heirloom-hotspot-outer">
+                        <?php foreach( $h_loop['shs_data'] as $shs_data ): ?>
+
+                            <a
+                                class="shs-pin"
+                                style="position: absolute; top: <?php echo $shs_data['shs_y'] . '%'; ?>; left: <?php echo $shs_data['shs_x'] . '%'; ?>;"
+                                href="<?php echo ( isset( $shs_data['shs_link'] ) ) ? $shs_data['shs_link'] : '#'; ?>"
+                            >
+                                <?php if ( $shs_data['shs_label'] !== '' ): ?>
+                                <span class="shs-pin-label"><?php echo $shs_data['shs_label']; ?></span>
+                                <?php endif; ?>
+
+                                <?php if ($shs_data['shs_text'] !== '' ): ?>
+                                <span class="<?php echo $shs_data['shs_layout'] . ' shs-pin-text'; ?>"><?php echo $shs_data['shs_text']; ?></span>
+                                <?php endif; ?>
+                            </a>
+                            
+                        <?php endforeach; ?>
+                        </div>
+
+                    <?php endif; ?>
                 </li>
+
             <?php endforeach; ?>
 
             </ul>
@@ -55,6 +81,8 @@ global $post, $product;
             <a href="#" class="hpc-next">→</a>
             <a href="#" class="hpc-zoom"><i class="fa fa-search-plus"></i></a>
         </div>
+        <?php endif; ?>
+
     <?php else: ?>            
         <?php
             /**

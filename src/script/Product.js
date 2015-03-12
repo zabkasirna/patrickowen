@@ -11,7 +11,8 @@ var Product = {
         },
         archive: {
             heirloom: initHeirloomArchive
-        }
+        },
+        hotspot: initHotspot
     }
 };
 
@@ -101,6 +102,37 @@ function initHeirloomArchive() {
     ,   _parentW = $product.length * $product.width() + 'px';
 
     $parent.css( 'width', _parentW );
+
+
+}
+
+function initHotspot() {
+    if ( !$('.heirloom-product-item').length ) return;
+    if ( !$('.heirloom-hotspot-outer').length ) return;
+
+    var $item = $('.heirloom-product-item'), $img, $shsOuter;
+
+    $item.each( function( i ) {
+        var $itemEl = $(this);
+        updateImageSize( $itemEl );
+
+        $(window).on('resize', function() {
+            updateImageSize( $itemEl );
+        });
+    });
+
+    $('.shs-pin').each( function() {
+        var $pinEl = $(this);
+        $pinEl.on('mouseenter', function() { $pinEl.addClass('show'); });
+        $pinEl.on('mouseleave', function() { $pinEl.removeClass('show'); });
+    });
+
+    function updateImageSize( $itemEl ) {
+        $img = $itemEl.find('.heirloom-product-image');
+        $shsOuter = $itemEl.find('.heirloom-hotspot-outer');
+        $shsOuter.css({ height: $img.css('height'), width: $img.css('width') });
+    }
+
 }
 
 module.exports = Product;

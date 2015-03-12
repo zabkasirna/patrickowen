@@ -111,6 +111,9 @@ $old: false;
     overflow: hidden;
     float: left;
 }
+
+$shs_pin_r: 16px;
+
 .heirloom-product {
     @include s-clearfix();
 
@@ -141,6 +144,88 @@ $old: false;
         max-height: 100%;
         height: 100%;
         float: left;
+    }
+
+    .heirloom-hotspot-outer {
+        display: block;
+        position: absolute;
+        width: 100%; height: 100%;
+
+        .shs-pin {
+
+            position: absolute;
+            display: block;
+            width: $shs_pin_r;
+            height: $shs_pin_r;
+            margin: ( $shs_pin_r / -2 ) 0 0 ( $shs_pin_r / -2 );
+            border-radius: 50%;
+            background-color: rgba( 0, 0, 0, .7 );
+            text-decoration: none;
+
+            &:hover{ cursor: pointer; }
+
+
+            .shs-pin-label {
+                position: absolute;
+                display: block;
+                margin: 0; padding: 1px 0 0 0;
+                text-align: center;
+                line-height: $shs_pin_r;
+                height: $shs_pin_r;
+                width: $shs_pin_r;
+                font-size: 9px;
+                font-family: $ff-sans-bold;
+                color: #FFF;
+                pointer-events: none;
+            }
+
+            .shs-pin-text {
+                position: absolute;
+                display: block;
+                padding: 0;
+                max-width: x(6);
+                max-height: x(3);
+                width: x(6);
+                height: x(3);
+                font-size: r(1rem);
+                line-height: r(1rem);
+                text-transform: uppercase;
+                letter-spacing: .1em;
+                font-family: $ff-sans-bold;
+                color: $black;
+                pointer-events: none;
+
+                @include transition( opacity .3s ease-out );
+                opacity: 0;
+
+                &.bottom-left {
+                    left: auto; right: 24px;
+                    top: 2px; bottom: auto;
+                    text-align: right;
+                }
+                &.bottom-right {
+                    left: 24px; right: 0;
+                    top: 2px; bottom: auto;
+                    text-align: left;
+                }
+                &.top-left {
+                    left: auto; right: 24px;
+                    top: auto; bottom: -8px;
+                    text-align: right;
+                }
+                &.top-right {
+                    left: 24px; right: 0;
+                    top: auto; bottom: -8px;
+                    text-align: left;
+                }
+
+            }
+        }
+
+        .shs-pin.show .shs-pin-text {
+            @include transition( opacity .3s ease-out );
+            opacity: 1;
+        }
     }
 }
 .heirloom-product-control {

@@ -25,4 +25,5 @@ $(window).on('load', function() {
     // Product Single
     // Heirloom
     Product.init.single.heirloom();
+    Product.init.hotspot();
 });
